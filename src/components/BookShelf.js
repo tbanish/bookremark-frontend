@@ -9,6 +9,7 @@ const BookShelf = (props) => {
 
   return(
     <div>
+      <h1>Book Shelf</h1>
       {renderBooks()}
     </div>
   )
