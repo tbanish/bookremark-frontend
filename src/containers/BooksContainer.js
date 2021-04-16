@@ -10,9 +10,9 @@ class BooksContainer extends React.Component {
     return(
       <div>
         <Switch>
-          <Route path="/books/reading-list" render={routerProps => <BookList {...routerProps} books={this.props.books}/>}/>
-          <Route path="/books/bookshelf" render={routerProps => <BookShelf {...routerProps} books={this.props.books}/>}/>
-          <Route path="/books/:id" render={routerProps => <Book {...routerProps} book={this.props.books.find(book => book.id === routerProps.match.params.id)}/>}/>
+          <Route exact path="/books/reading-list" render={routerProps => <BookList {...routerProps} books={this.props.books}/>}/>
+          <Route exact path="/books/bookshelf" render={routerProps => <BookShelf {...routerProps} books={this.props.books}/>}/>
+          <Route exact path="/books/:id" render={routerProps => <Book {...routerProps} book={this.props.books.find(book => book.id === routerProps.match.params.id)}/>}/>
         </Switch>
       </div>
     )
