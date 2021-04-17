@@ -4,6 +4,7 @@ import { loadBooks } from './actions/books.js'
 import BooksContainer from './containers/BooksContainer.js'
 import ReadingSessionContainer from './containers/ReadingSessionContainer.js'
 import NavBar from './components/NavBar'
+import TodaysDate from './components/TodaysDate'
 
 class App extends React.Component {
 
@@ -14,6 +15,7 @@ class App extends React.Component {
     return(
       <div>
         <NavBar />
+        <TodaysDate />
         <BooksContainer />
         <ReadingSessionContainer />
       </div>
