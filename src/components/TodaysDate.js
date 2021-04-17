@@ -1,4 +1,6 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { setDate } from '../actions/date.js'
 
 class TodaysDate extends React.Component {
   renderDate() {
@@ -12,6 +14,7 @@ class TodaysDate extends React.Component {
     const fullMonth = months.find(m => months.indexOf(m) === month)
     const fullDay = weekDays.find(d => weekDays.indexOf(d) === day)
     const now = `${fullDay} ${fullMonth} ${date}, ${year}`
+    this.props.setDate(now)
     return now
   }
 
@@ -24,4 +27,4 @@ class TodaysDate extends React.Component {
   }
 }
 
-export default TodaysDate
+export default connect(null, { setDate })(TodaysDate)
