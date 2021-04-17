@@ -1,9 +1,11 @@
 import React from 'react'
 import Timer from './Timer.js'
+import { connect } from 'react-redux'
 
 class ReadingSessionNewForm extends React.Component {
   state = {
-    title: ''
+    title: '',
+    date: this.props.date,
   }
 
   handleChange = (event) => {
@@ -25,4 +27,10 @@ class ReadingSessionNewForm extends React.Component {
   }
 }
 
-export default ReadingSessionNewForm
+const mapStateToProps = state => {
+  return {
+    date: state.date
+  }
+}
+
+export default connect(mapStateToProps)(ReadingSessionNewForm)
