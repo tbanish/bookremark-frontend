@@ -12,8 +12,9 @@ class BookNewForm extends React.Component {
     })
   }
 
-  handleSubmit = () => {
-    
+  handleSubmit = (event) => {
+    event.preventDefault()
+    this.props.addBook(this.state)
   }
 
   render() {
