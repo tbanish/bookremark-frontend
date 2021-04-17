@@ -10,7 +10,7 @@ class ReadingSessionContainer extends React.Component {
     return(
       <div>
         <Switch>
-          <Route exact path={`/books/:id/reading-sessions`} render={routerProps => <ReadingSessionList {...routerProps} readingSessions={this.props.readingSessions.filter(readingSession => readingSession.id === parseInt(routerProps.match.params.id))}/>}/>
+          <Route exact path={`/books/:id/reading-sessions`} render={routerProps => <ReadingSessionList {...routerProps} readingSessions={this.props.readingSessions.filter(readingSession => readingSession.book_id === parseInt(routerProps.match.params.id))}/>}/>
           <Route exact path={`/books/:id/reading-sessions/new`} render={routerProps => <ReadingSessionNewForm {...routerProps} />}/>
           <Route exact path={`/books/:id/reading-sessions/:id`} render={routerProps => <ReadingSession {...routerProps} readingSession={this.props.readingSessions.find(readingSession => readingSession.id === parseInt(routerProps.match.params.id))}/>}/>
         </Switch>
