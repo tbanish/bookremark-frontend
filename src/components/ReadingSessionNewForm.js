@@ -6,6 +6,7 @@ class ReadingSessionNewForm extends React.Component {
   state = {
     title: '',
     date: this.props.date,
+    duration: ''
   }
 
   handleChange = (event) => {
@@ -14,12 +15,28 @@ class ReadingSessionNewForm extends React.Component {
     })
   }
 
+  setDuration = (time) => {
+    let duration;
+    if (time.hours === 0 && time.minutes > 0) {
+      duration = `${time.minutes} minutes`
+    } else if (time.hours > 0 && time.minutes > 0) {
+      duration = `${time.hours} hours ${time.minutes} minutes`
+    } else if (time.hours > 0 && time.minutes === 0) {
+      duration =  `${time.hours} hours`
+    } else if (time.hours === 0 && time.minutes === 0) {
+      duration = `${time.seconds} seconds`
+    }
+    this.setState({
+      duration: duration
+    })
+  }
+
   render() {
     return(
       <div>
         <form>
           <input onChange={this.handleChange} type="text" name="title" value={this.state.title} placeholder="title"/><br/><br/>
-          <Timer /><br/>
+          <Timer setDuration={this.setDuration}/><br/>
           <input type="submit" value="end session"/>
         </form>
       </div>
