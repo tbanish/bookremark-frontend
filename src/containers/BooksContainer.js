@@ -2,6 +2,7 @@ import React from 'react'
 import BookList from '../components/BookList'
 import BookShelf from '../components/BookShelf'
 import Book from '../components/Book'
+import BookNewForm from '../components/BookNewForm'
 import { Route, Switch } from 'react-router-dom'
 import { connect } from 'react-redux'
 
@@ -12,6 +13,7 @@ class BooksContainer extends React.Component {
         <Switch>
           <Route exact path="/books/reading-list" render={routerProps => <BookList {...routerProps} books={this.props.books}/>}/>
           <Route exact path="/books/bookshelf" render={routerProps => <BookShelf {...routerProps} books={this.props.books}/>}/>
+          <Route exact path="/books/new" component={BookNewForm}/>
           <Route exact path="/books/:id" render={routerProps => <Book {...routerProps} book={this.props.books.find(book => book.id === routerProps.match.params.id)}/>}/>
         </Switch>
       </div>
