@@ -50,6 +50,7 @@ class ReadingSessionNewForm extends React.Component {
   render() {
     return(
       <div>
+        <h1>New Reading Session</h1>
         <form onSubmit={this.handleSubmit}>
           <input onChange={this.handleChange} type="text" name="title" value={this.state.title} placeholder="title"/><br/><br/>
           <Timer setDuration={this.setDuration}/><br/>
