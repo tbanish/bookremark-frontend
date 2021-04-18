@@ -15,3 +15,19 @@ export const addReadingSession = (readingSession) => {
       })
   }
 }
+
+export const updateReadingSession = (readingSession, id) => {
+  return dispatch => {
+    fetch(`http://localhost:3001/books/${readingSession.book_id}/reading_sessions/${id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(readingSession)
+    })
+      .then(resp => resp.json())
+      .then(updatedReadingSession => {
+        dispatch({type: 'UPDATE_READING_SESSION', payload: updatedReadingSession.data})
+      })
+  }
+}
