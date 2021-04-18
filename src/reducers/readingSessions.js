@@ -26,6 +26,8 @@ export const readingSessions = (state = [], action) => {
       return state.map(readingSession => {
         return readingSession.id === updatedReadingSession.id ? updatedReadingSession : readingSession
       })
+    case 'DELETE_READING_SESSIONS':
+      return state.filter(readingSession => readingSession.book_id !== parseInt(action.payload))
     default:
       return state
   }
