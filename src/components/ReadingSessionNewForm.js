@@ -5,7 +5,10 @@ class ReadingSessionNewForm extends React.Component {
   state = {
     title: '',
     date: this.props.date,
-    duration: ''
+    duration: '',
+    noteTitle: '',
+    noteContent: '',
+    notes: []
   }
 
   handleChange = (event) => {
