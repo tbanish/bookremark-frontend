@@ -11,10 +11,16 @@ const Book = (props) => {
     )
   }
 
+  const handleClick = () => {
+    props.deleteBook(props.book.id)
+    props.history.push('/books/reading-list')
+  }
+
   return(
     <div>
       <h1>{props.book && props.book.attributes.title}</h1>
       <p>By {props.book && props.book.attributes.author}</p>
+      <input onClick={() => handleClick()} type="button" value="delete" /><br/><br/>
       {renderLinks()}
     </div>
   )
