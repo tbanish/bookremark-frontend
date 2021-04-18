@@ -15,6 +15,17 @@ export const readingSessions = (state = [], action) => {
         book_id: action.payload.attributes.book.id,
       }
       return state.concat(newReadingSession)
+    case 'UPDATE_READING_SESSION':
+      const updatedReadingSession = {
+        id: parseInt(action.payload.id),
+        title: action.payload.attributes.title,
+        duration: action.payload.attributes.duration,
+        date: action.payload.attributes.date,
+        book_id: action.payload.attributes.book.id
+      }
+      return state.map(readingSession => {
+        return readingSession.id === updatedReadingSession.id ? updatedReadingSession : readingSession
+      })
     default:
       return state
   }
