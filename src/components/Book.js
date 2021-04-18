@@ -4,7 +4,10 @@ import { Link } from 'react-router-dom'
 const Book = (props) => {
   const renderLinks = () => {
     return (
-      <Link to={`/books/${props.book.id}/reading-sessions`}>Reading Sessions</Link>
+      <div>
+        <Link to={`/books/${props.book && props.book.id}/reading-sessions`}>Reading Sessions</Link><br/><br/>
+        <Link to={`/books/${props.book && props.book.id}/edit`}>Edit Book</Link>
+      </div>
     )
   }
 
