@@ -1,5 +1,6 @@
 import React from 'react'
 import Timer from './Timer.js'
+import uuid from 'uuid'
 
 class ReadingSessionNewForm extends React.Component {
   state = {
@@ -32,6 +33,38 @@ class ReadingSessionNewForm extends React.Component {
     }
   }
 
+  handleNoteSubmit = (event) => {
+    event.preventDefault()
+
+    if (this.state.noteContent === "" || this.state.noteTitle === "") {
+      alert('Make sure you give your note a title and content')
+    } else {
+      this.setState({
+        notes: [...this.state.notes, {id: uuid(), content: this.state.noteContent, title: this.state.noteTitle}]
+      })
+
+      this.setState({
+        noteTitle: '',
+        noteContent: ''
+      })
+    }
+  }
+
+  renderNotes = () => {
+    const notes = this.state.notes
+
+    if (notes.length > 0) {
+      return notes.map(note =>
+        <div key={note.id} onDoubleClick={this.handleDoubleClick}>
+          <h4>{note.title}</h4>
+          <p id={note.id}>{note.content}</p>
+          <input type="button" value="delete"/>
+        </div>
+      )
+    }
+  }
+
+
   setDuration = (time) => {
     let duration;
     if (time.hours === 0 && time.minutes > 0) {
@@ -57,11 +90,12 @@ class ReadingSessionNewForm extends React.Component {
           <Timer setDuration={this.setDuration}/><br/>
           <input type="submit" value="end session"/>
         </form>
-        <form><br/><br/>
+        <form onSubmit={this.handleNoteSubmit}><br/><br/>
           <input onChange={this.handleChange} type="text" name="noteTitle" value={this.state.noteTitle} placeholder="give your note a title"/><br/><br/>
           <textarea onChange={this.handleChange} type="text" name="noteContent" rows={15} cols={60} value={this.state.noteContent} placeholder="add some notes here ..."/><br/><br/>
           <input type="submit" value="add note"/>
         </form>
+        {this.renderNotes()}
       </div>
     )
   }
