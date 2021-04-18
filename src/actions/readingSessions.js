@@ -35,3 +35,12 @@ export const updateReadingSession = (readingSession, id) => {
 export const deleteReadingSessions = (id) => {
   return (dispatch) => dispatch({type: 'DELETE_READING_SESSIONS', payload: id})
 }
+
+export const deleteReadingSession = (readingSession) => {
+  return dispatch => {
+    fetch(`http://localhost:3001/books/${readingSession.book_id}/reading_sessions/${readingSession.id}`, {
+      method: 'DELETE'
+    })
+      .then(resp => dispatch({type: 'DELETE_READING_SESSION', payload: readingSession.id}))
+  }
+}
