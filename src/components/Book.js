@@ -13,6 +13,7 @@ const Book = (props) => {
 
   const handleClick = () => {
     props.deleteBook(props.book.id)
+    props.deleteReadingSessions(props.book.id)
     props.history.push('/books/reading-list')
   }
 
