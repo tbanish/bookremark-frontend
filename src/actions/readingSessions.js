@@ -31,3 +31,7 @@ export const updateReadingSession = (readingSession, id) => {
       })
   }
 }
+
+export const deleteReadingSessions = (id) => {
+  return (dispatch) => dispatch({type: 'DELETE_READING_SESSIONS', payload: id})
+}
