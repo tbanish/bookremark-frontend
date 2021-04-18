@@ -8,6 +8,8 @@ export const books = (state = [], action) => {
       return state.map(book => {
         return book.id === action.payload.id ? action.payload : book
       })
+    case 'DELETE_BOOK':
+      return state.filter(book => book.id !== action.payload)
     default:
       return state
   }
