@@ -50,3 +50,12 @@ export const updateBook = (book, id) => {
       })
   }
 }
+
+export const deleteBook = (id) => {
+  return (dispatch) => {
+    fetch(`http://localhost:3001/books/${id}`, {
+      method: 'DELETE'
+    })
+      .then(resp => dispatch({type: 'DELETE_BOOK', payload: id}))
+  }
+}
