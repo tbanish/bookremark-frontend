@@ -1,4 +1,5 @@
 import React from 'react'
+import NoteList from './NoteList.js'
 import { Link } from 'react-router-dom'
 
 const Book = (props) => {
@@ -22,7 +23,8 @@ const Book = (props) => {
       <h1>{props.book && props.book.attributes.title}</h1>
       <p>By {props.book && props.book.attributes.author}</p>
       <input onClick={() => handleClick()} type="button" value="delete" /><br/><br/>
-      {renderLinks()}
+      {renderLinks()}<br/>
+      <NoteList book={props.book} notes={props.notes}/>
     </div>
   )
 }
