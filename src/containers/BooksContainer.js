@@ -4,6 +4,7 @@ import BookShelf from '../components/BookShelf'
 import Book from '../components/Book'
 import BookNewForm from '../components/BookNewForm'
 import BookEditForm from '../components/BookEditForm'
+import Note from '../components/Note.js'
 import { Route, Switch } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { addBook, updateBook, deleteBook } from '../actions/books.js'
@@ -20,6 +21,7 @@ class BooksContainer extends React.Component {
           <Route exact path="/books/new" render={routerProps => <BookNewForm {...routerProps} addBook={this.props.addBook}/>}/>
           <Route exact path="/books/:id" render={routerProps => <Book {...routerProps} notes={this.props.notes.filter(note => note.id === parseInt(routerProps.match.params.id))} deleteBook={this.props.deleteBook} deleteReadingSessions={this.props.deleteReadingSessions} book={this.props.books.find(book => book.id === routerProps.match.params.id)}/>}/>
           <Route exact path="/books/:id/edit" render={routerProps => <BookEditForm {...routerProps} updateBook={this.props.updateBook} book={this.props.books.find(book => book.id === routerProps.match.params.id)}/>}/>
+          <Route exact path="/books/:id/notes/:id" render={routerProps => <Note note={this.props.notes.find(note => note.id === parseInt(routerProps.match.params.id))}/>} />
         </Switch>
       </div>
     )
