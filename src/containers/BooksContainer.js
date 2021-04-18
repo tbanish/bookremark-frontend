@@ -7,6 +7,7 @@ import BookEditForm from '../components/BookEditForm'
 import { Route, Switch } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { addBook } from '../actions/books.js'
+import { updateBook } from '../actions/books'
 
 class BooksContainer extends React.Component {
   render() {
@@ -17,7 +18,7 @@ class BooksContainer extends React.Component {
           <Route exact path="/books/bookshelf" render={routerProps => <BookShelf {...routerProps} books={this.props.books}/>}/>
           <Route exact path="/books/new" render={routerProps => <BookNewForm {...routerProps} addBook={this.props.addBook}/>}/>
           <Route exact path="/books/:id" render={routerProps => <Book {...routerProps} book={this.props.books.find(book => book.id === routerProps.match.params.id)}/>}/>
-          <Route exact path="/books/:id/edit" render={routerProps => <BookEditForm {...routerProps} book={this.props.books.find(book => book.id === routerProps.match.params.id)}/>}/>
+          <Route exact path="/books/:id/edit" render={routerProps => <BookEditForm {...routerProps} updateBook={this.props.updateBook} book={this.props.books.find(book => book.id === routerProps.match.params.id)}/>}/>
         </Switch>
       </div>
     )
@@ -30,4 +31,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, { addBook })(BooksContainer)
+export default connect(mapStateToProps, { addBook, updateBook })(BooksContainer)
