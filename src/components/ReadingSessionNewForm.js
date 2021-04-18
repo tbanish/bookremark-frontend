@@ -54,6 +54,11 @@ class ReadingSessionNewForm extends React.Component {
           <Timer setDuration={this.setDuration}/><br/>
           <input type="submit" value="end session"/>
         </form>
+        <form><br/><br/>
+          <input type="text" name="noteTitle" value={this.state.noteTitle} placeholder="give your note a title"/><br/><br/>
+          <textarea type="text" name="noteContent" rows={15} cols={60} value={this.state.noteContent} placeholder="add some notes here ..."/><br/><br/>
+          <input type="submit" value="add note"/>
+        </form>
       </div>
     )
   }
