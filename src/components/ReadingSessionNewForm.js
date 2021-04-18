@@ -50,6 +50,13 @@ class ReadingSessionNewForm extends React.Component {
     }
   }
 
+  handleClick = (event) => {
+    this.setState({
+      notes: this.state.notes.filter(note => note.id !== event.target.id)
+    })
+
+  }
+
   renderNotes = () => {
     const notes = this.state.notes
 
@@ -58,7 +65,7 @@ class ReadingSessionNewForm extends React.Component {
         <div key={note.id} onDoubleClick={this.handleDoubleClick}>
           <h4>{note.title}</h4>
           <p id={note.id}>{note.content}</p>
-          <input type="button" value="delete"/>
+          <input id={note.id} onClick={this.handleClick} type="button" value="delete"/>
         </div>
       )
     }
