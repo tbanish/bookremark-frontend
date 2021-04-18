@@ -14,6 +14,8 @@ class BookEditForm extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
+    const bookId = this.props.book.id
+    this.props.updateBook(this.state, bookId)
   }
 
   render() {
