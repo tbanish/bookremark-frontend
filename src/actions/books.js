@@ -25,8 +25,28 @@ export const addBook = (book) => {
       body: JSON.stringify(body)
     })
       .then(resp => resp.json())
-      .then(book => {
-        dispatch({type: 'ADD_BOOK', payload: book.data})
+      .then(newBook => {
+        dispatch({type: 'ADD_BOOK', payload: newBook.data})
+      })
+  }
+}
+
+export const updateBook = (book, id) => {
+  const body = {
+    title: book.title,
+    author: book.author
+  }
+  return dispatch => {
+    fetch(booksEndpoint+`/${id}`, {
+      method: 'PATCH',
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(body)
+    })
+      .then(resp => resp.json())
+      .then(updatedBook => {
+        dispatch({type: 'UPDATE_BOOK', payload: updatedBook.data})
       })
   }
 }
