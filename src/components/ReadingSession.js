@@ -11,12 +11,18 @@ const ReadingSession = (props) => {
     )
   }
 
+  const handleClick = () => {
+    props.deleteReadingSession(props.readingSession)
+    props.history.push(`/books/${props.readingSession.book_id}/reading-sessions`)
+  }
+
   return(
     <div>
       <h1>{props.readingSession && props.readingSession.title}</h1>
       {renderLinks()}<br/><br/>
       <p>Date: {props.readingSession && props.readingSession.date}</p>
       <p>Duration: {props.readingSession && props.readingSession.duration}</p>
+      <input onClick={() => handleClick()} type="button" value="delete"/>
     </div>
   )
 }
