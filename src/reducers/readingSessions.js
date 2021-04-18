@@ -30,5 +30,7 @@ export const readingSessions = (state = [], action) => {
       return state.filter(readingSession => readingSession.book_id !== parseInt(action.payload))
     default:
       return state
+    case 'DELETE_READING_SESSION':
+      return state.filter(readingSession => readingSession.id !== parseInt(action.payload)) 
   }
 }
