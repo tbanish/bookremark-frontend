@@ -7,6 +7,7 @@ export const loadBooks = () => {
       .then(books => {
         dispatch({type: 'LOAD_BOOKS', payload: books.data})
         dispatch({type: 'LOAD_READING_SESSIONS', payload: books.data})
+        dispatch({type: 'LOAD_NOTES', payload: books.data})
       })
   }
 }
