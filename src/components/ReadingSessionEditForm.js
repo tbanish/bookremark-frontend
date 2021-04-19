@@ -24,6 +24,7 @@ class ReadingSessionEditForm extends React.Component {
     }
 
     this.props.updateReadingSession(readingSession, this.props.readingSession.id)
+    this.props.history.push(`/books/${readingSession.book_id}/reading-sessions/${this.props.readingSession.id}`)
   }
 
   render() {
