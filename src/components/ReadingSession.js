@@ -18,7 +18,7 @@ const ReadingSession = (props) => {
 
   const renderNotes = () => {
     return props.notes.map(note =>
-      <div>
+      <div key={note.id}>
         <h2>{note.title}</h2>
         <p>{note.content}</p>
       </div>
