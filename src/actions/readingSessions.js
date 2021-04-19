@@ -21,6 +21,17 @@ export const addReadingSession = (readingSession) => {
       .then(resp => resp.json())
       .then(readingSession => {
         dispatch({type: 'ADD_READING_SESSION', payload: readingSession.data})
+
+        for (const note of readingSession.data.attributes.notes) {
+          let newNote = {
+            id: note.id,
+            title: note.title,
+            content: note.content,
+            readingSessionId: note.reading_session_id,
+            bookId: readingSession.data.attributes.book.id.toString()
+          }
+          dispatch({type: 'ADD_NOTE', payload: newNote})
+        }
       })
   }
 }
