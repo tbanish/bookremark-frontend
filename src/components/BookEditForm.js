@@ -16,6 +16,7 @@ class BookEditForm extends React.Component {
     event.preventDefault()
     const bookId = this.props.book.id
     this.props.updateBook(this.state, bookId)
+    this.props.history.push(`/books/${this.props.match.params.id}`)
   }
 
   render() {
