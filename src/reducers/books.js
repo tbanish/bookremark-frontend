@@ -10,6 +10,10 @@ export const books = (state = [], action) => {
       })
     case 'DELETE_BOOK':
       return state.filter(book => book.id !== action.payload)
+    case 'FINISH_BOOK':
+    return state.map(book => {
+      return book.id === action.payload.id ? action.payload : book
+    })
     default:
       return state
   }
