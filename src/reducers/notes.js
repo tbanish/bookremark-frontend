@@ -23,6 +23,8 @@ export const notes = (state = [], action) => {
       })
     case 'DELETE_NOTE':
       return state.filter(note => note.id !== action.payload)
+    case 'DELETE_NOTES':
+      return state.filter(note => note.readingSessionId !== action.payload)
     default:
       return state
   }
