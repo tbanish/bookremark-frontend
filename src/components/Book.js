@@ -21,11 +21,16 @@ const Book = (props) => {
     props.history.push('/books/reading-list')
   }
 
+  const handleFinish = () => {
+    props.finishBook(props.book.id)
+  }
+
   return(
     <div>
       <h1>{props.book && props.book.attributes.title}</h1>
       <p>By {props.book && props.book.attributes.author}</p>
-      <input onClick={() => handleClick()} type="button" value="delete" /><br/><br/>
+      <input onClick={() => handleClick()} type="button" value="delete" />
+      <input onClick={() => handleFinish()} type="button" value="finish" /><br/><br/>
       {renderLinks()}<br/>
       <NoteList book={props.book} notes={props.notes}/>
     </div>
