@@ -15,6 +15,7 @@ class BookNewForm extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault()
     this.props.addBook(this.state)
+    this.props.history.push('/books/reading-list')
   }
 
   render() {
