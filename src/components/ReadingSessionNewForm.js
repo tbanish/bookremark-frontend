@@ -75,16 +75,7 @@ class ReadingSessionNewForm extends React.Component {
 
 
   setDuration = (time) => {
-    let duration;
-    if (time.hours === 0 && time.minutes > 0) {
-      duration = `${time.minutes} minutes`
-    } else if (time.hours > 0 && time.minutes > 0) {
-      duration = `${time.hours} hours ${time.minutes} minutes`
-    } else if (time.hours > 0 && time.minutes === 0) {
-      duration =  `${time.hours} hours`
-    } else if (time.hours === 0 && time.minutes === 0) {
-      duration = `${time.seconds} seconds`
-    }
+    const duration = time.minutes
     this.setState({
       duration: duration
     })
