@@ -17,6 +17,10 @@ export const notes = (state = [], action) => {
       return notes
     case 'ADD_NOTE':
       return [...state, action.payload]
+    case 'UPDATE_NOTE':
+      return state.map(note => {
+        return note.id === action.payload.id ? action.payload : note
+      })
     default:
       return state
   }
