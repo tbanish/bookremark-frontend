@@ -27,7 +27,8 @@ class ReadingSessionNewForm extends React.Component {
         title: this.state.title,
         duration: this.state.duration,
         date: this.props.date,
-        book_id: this.props.match.params.id
+        book_id: this.props.match.params.id,
+        notes: this.state.notes
       }
       this.props.addReadingSession(readingSession)
     }
