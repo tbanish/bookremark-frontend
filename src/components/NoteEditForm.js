@@ -21,6 +21,7 @@ class NoteEditForm extends React.Component {
     }
 
     this.props.updateNote(updatedNote, this.props.note.bookId)
+    this.props.history.push(`/books/${this.props.note.bookId}/notes/${this.props.note.id}`)
   }
 
   render() {
