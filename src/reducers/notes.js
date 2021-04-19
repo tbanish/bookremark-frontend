@@ -15,6 +15,8 @@ export const notes = (state = [], action) => {
         }
       }
       return notes
+    case 'ADD_NOTE':
+      return [...state, action.payload]
     default:
       return state
   }
