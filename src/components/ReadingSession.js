@@ -37,7 +37,7 @@ const ReadingSession = (props) => {
       <h1>{props.readingSession && props.readingSession.title}</h1>
       {renderLinks()}<br/><br/>
       <p>Date: {props.readingSession && props.readingSession.date}</p>
-      <p>Duration: {props.readingSession && props.readingSession.duration}</p>
+      <p>Duration: {props.readingSession && props.readingSession.duration} minutes</p>
       <input onClick={() => handleClick()} type="button" value="delete"/><br/>
       {renderNotes()}
     </div>
