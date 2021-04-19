@@ -60,3 +60,22 @@ export const deleteBook = (id) => {
       .then(resp => dispatch({type: 'DELETE_BOOK', payload: id}))
   }
 }
+
+export const finishBook = (id) => {
+    const body = {
+      finished: true
+    }
+  return dispatch => {
+    fetch(booksEndpoint+`/${id}`, {
+      method: 'PATCH',
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(body)
+    })
+      .then(resp => resp.json())
+      .then(finishedBook => {
+        dispatch({type: 'FINISH_BOOK', payload: finishedBook.data})
+      })
+  }
+}
