@@ -1,7 +1,16 @@
 
 export const addReadingSession = (readingSession) => {
   return dispatch => {
-    const body = readingSession
+    const body = {
+      reading_session: {
+        title: readingSession.title,
+        duration: readingSession.duration,
+        date: readingSession.date,
+        book_id: readingSession.book_id,
+        notes_attributes: readingSession.notes
+      }
+    }
+
     fetch(`http://localhost:3001/books/${readingSession.book_id}/reading_sessions`, {
       method: 'POST',
       headers: {
