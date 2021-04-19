@@ -29,3 +29,9 @@ export const deleteNote = (id, bookId) => {
       .then(resp => dispatch({type: 'DELETE_NOTE', payload: id}))
   }
 }
+
+export const deleteNotes = (id) => {
+  return dispatch => {
+    dispatch({type: 'DELETE_NOTES', payload: id})
+  }
+}
