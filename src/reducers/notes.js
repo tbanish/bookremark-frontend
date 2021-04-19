@@ -2,10 +2,19 @@ export const notes = (state = [], action) => {
   switch (action.type) {
     case 'LOAD_NOTES':
       const notes = []
-      for (const element of action.payload) {
-        notes.push(element.attributes.notes)
+      for (const book of action.payload) {
+        for (const note of book.attributes.notes) {
+          let newNote = {
+            id: note.id,
+            title: note.title,
+            content: note.content,
+            readingSessionId: note.reading_session_id,
+            bookId: book.id
+          }
+          notes.push(newNote)
+        }
       }
-      return notes.flat()
+      return notes
     default:
       return state
   }
