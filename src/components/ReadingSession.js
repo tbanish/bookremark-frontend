@@ -16,11 +16,17 @@ const ReadingSession = (props) => {
     props.history.push(`/books/${props.readingSession.book_id}/reading-sessions`)
   }
 
+  const handleDeleteNote = (event) => {
+    const noteId = parseInt(event.target.id)
+    props.deleteNote(noteId)
+  }
+
   const renderNotes = () => {
     return props.notes.map(note =>
       <div key={note.id}>
         <h2>{note.title}</h2>
         <p>{note.content}</p>
+        <input onClick={(event) => handleDeleteNote(event)} id={note.id} type="button" value="delete note"/>
       </div>
     )
   }
