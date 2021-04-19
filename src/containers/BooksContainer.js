@@ -8,7 +8,7 @@ import Note from '../components/Note.js'
 import NoteEditForm from '../components/NoteEditForm.js'
 import { Route, Switch } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { addBook, updateBook, deleteBook } from '../actions/books.js'
+import { addBook, updateBook, deleteBook, finishBook } from '../actions/books.js'
 import { deleteReadingSessions } from '../actions/readingSessions.js'
 import { updateNote, deleteNote, deleteNotes } from '../actions/notes.js'
 
@@ -22,7 +22,14 @@ class BooksContainer extends React.Component {
           <Route exact path="/books/bookshelf" render={routerProps => <BookShelf {...routerProps} books={this.props.books}/>}/>
           <Route exact path="/books/new" render={routerProps => <BookNewForm {...routerProps} addBook={this.props.addBook}/>}/>
           <Route exact path="/books/:id" render={routerProps =>
-              <Book {...routerProps} readingSessions={this.props.readingSessions.filter(readingSession => readingSession.book_id === parseInt(routerProps.match.params.id))} deleteNotes={this.props.deleteNotes} notes={this.props.notes.filter(note => note.bookId === routerProps.match.params.id)} deleteBook={this.props.deleteBook} deleteReadingSessions={this.props.deleteReadingSessions} book={this.props.books.find(book => book.id === routerProps.match.params.id)}/>}/>
+              <Book {...routerProps}
+                finishBook={this.props.finishBook}
+                readingSessions={this.props.readingSessions.filter(readingSession => readingSession.book_id === parseInt(routerProps.match.params.id))}
+                deleteNotes={this.props.deleteNotes}
+                notes={this.props.notes.filter(note => note.bookId === routerProps.match.params.id)}
+                deleteBook={this.props.deleteBook}
+                deleteReadingSessions={this.props.deleteReadingSessions}
+                book={this.props.books.find(book => book.id === routerProps.match.params.id)}/>}/>
           <Route exact path="/books/:id/edit" render={routerProps => <BookEditForm {...routerProps} updateBook={this.props.updateBook} book={this.props.books.find(book => book.id === routerProps.match.params.id)}/>}/>
           <Route exact path="/books/:id/notes/:id" render={routerProps => <Note {...routerProps} deleteNote={this.props.deleteNote} note={this.props.notes.find(note => note.id === parseInt(routerProps.match.params.id))}/>} />
           <Route exact path="/books/:id/notes/:id/edit" render={routerProps => <NoteEditForm {...routerProps} updateNote={this.props.updateNote} note={this.props.notes.find(note => note.id === parseInt(routerProps.match.params.id))}/>}/>
@@ -40,4 +47,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, { addBook, updateBook, deleteBook, deleteReadingSessions, updateNote, deleteNote, deleteNotes })(BooksContainer)
+export default connect(mapStateToProps, { addBook, updateBook, deleteBook, deleteReadingSessions, updateNote, deleteNote, deleteNotes, finishBook })(BooksContainer)
