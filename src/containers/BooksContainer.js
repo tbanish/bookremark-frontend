@@ -19,7 +19,7 @@ class BooksContainer extends React.Component {
           <Route exact path="/books/reading-list" render={routerProps => <BookList {...routerProps} books={this.props.books}/>}/>
           <Route exact path="/books/bookshelf" render={routerProps => <BookShelf {...routerProps} books={this.props.books}/>}/>
           <Route exact path="/books/new" render={routerProps => <BookNewForm {...routerProps} addBook={this.props.addBook}/>}/>
-          <Route exact path="/books/:id" render={routerProps => <Book {...routerProps} notes={this.props.notes.filter(note => note.id === parseInt(routerProps.match.params.id))} deleteBook={this.props.deleteBook} deleteReadingSessions={this.props.deleteReadingSessions} book={this.props.books.find(book => book.id === routerProps.match.params.id)}/>}/>
+          <Route exact path="/books/:id" render={routerProps => <Book {...routerProps} notes={this.props.notes.filter(note => note.bookId === routerProps.match.params.id)} deleteBook={this.props.deleteBook} deleteReadingSessions={this.props.deleteReadingSessions} book={this.props.books.find(book => book.id === routerProps.match.params.id)}/>}/>
           <Route exact path="/books/:id/edit" render={routerProps => <BookEditForm {...routerProps} updateBook={this.props.updateBook} book={this.props.books.find(book => book.id === routerProps.match.params.id)}/>}/>
           <Route exact path="/books/:id/notes/:id" render={routerProps => <Note note={this.props.notes.find(note => note.id === parseInt(routerProps.match.params.id))}/>} />
         </Switch>
