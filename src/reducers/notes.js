@@ -21,6 +21,8 @@ export const notes = (state = [], action) => {
       return state.map(note => {
         return note.id === action.payload.id ? action.payload : note
       })
+    case 'DELETE_NOTE':
+      return state.filter(note => note.id !== action.payload)
     default:
       return state
   }
