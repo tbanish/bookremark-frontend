@@ -25,12 +25,28 @@ const Book = (props) => {
     props.finishBook(props.book.id)
   }
 
+  const renderButtons = () => {
+    if (props.book && props.book.attributes.finished !== true) {
+      return(
+        <div>
+          <input onClick={() => handleClick()} type="button" value="delete" />
+          <input onClick={() => handleFinish()} type="button" value="finish" />
+        </div>
+      )
+    } else {
+      return(
+        <div>
+          <input onClick={() => handleClick()} type="button" value="delete" />
+        </div>
+      )
+    }
+  }
+
   return(
     <div>
       <h1>{props.book && props.book.attributes.title}</h1>
       <p>By {props.book && props.book.attributes.author}</p>
-      <input onClick={() => handleClick()} type="button" value="delete" />
-      <input onClick={() => handleFinish()} type="button" value="finish" /><br/><br/>
+      {renderButtons()}<br/><br/>
       {renderLinks()}<br/>
       <NoteList book={props.book} notes={props.notes}/>
     </div>
