@@ -11,6 +11,12 @@ class GoalNewForm extends React.Component {
     })
   }
 
+  handleSubmit = (event) => {
+    event.preventDefault()
+    this.props.addGoal(this.state.goal)
+    this.props.history.push('/')
+  }
+
   renderOptions = () => {
     let options = []
     for (let i = 1; i < 999; i++) {
@@ -24,7 +30,7 @@ class GoalNewForm extends React.Component {
       <div>
         <h1>Set Yearly Book Goal</h1>
         <p>How many books would you like to read this year?</p>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <select value={this.state.goal} name="goal" onChange={this.handleChange}>
             {this.renderOptions()}
           </select><br/><br/>
