@@ -28,6 +28,7 @@ class BooksContainer extends React.Component {
                 deleteNotes={this.props.deleteNotes}
                 notes={this.props.notes.filter(note => note.bookId === routerProps.match.params.id)}
                 deleteBook={this.props.deleteBook}
+                goals={this.props.goals}
                 deleteReadingSessions={this.props.deleteReadingSessions}
                 book={this.props.books.find(book => book.id === routerProps.match.params.id)}/>}/>
           <Route exact path="/books/:id/edit" render={routerProps => <BookEditForm {...routerProps} updateBook={this.props.updateBook} book={this.props.books.find(book => book.id === routerProps.match.params.id)}/>}/>
@@ -43,7 +44,8 @@ const mapStateToProps = state => {
   return {
     books: state.books,
     notes: state.notes,
-    readingSessions: state.readingSessions
+    readingSessions: state.readingSessions,
+    goals: state.goals
   }
 }
 
