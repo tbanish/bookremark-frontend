@@ -6,6 +6,7 @@ import BooksContainer from './containers/BooksContainer.js'
 import ReadingSessionContainer from './containers/ReadingSessionContainer.js'
 import NavBar from './components/NavBar'
 import TodaysDate from './components/TodaysDate'
+import GoalContainer from './containers/GoalContainer'
 
 class App extends React.Component {
 
@@ -20,6 +21,7 @@ class App extends React.Component {
         <TodaysDate />
         <BooksContainer />
         <ReadingSessionContainer />
+        <GoalContainer />
       </div>
     )
   }
