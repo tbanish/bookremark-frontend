@@ -13,7 +13,10 @@ const Book = (props) => {
   }
 
   const handleClick = () => {
-    props.deleteBook(props.book.id)
+    const bookId = props.book.id
+    const goal = props.goals[0].attributes.total
+    const goalId = props.goals[0].id
+    props.deleteBook(bookId, goal, goalId)
     props.deleteReadingSessions(props.book.id)
     for (const readingSession of props.readingSessions) {
       props.deleteNotes(readingSession.id)
