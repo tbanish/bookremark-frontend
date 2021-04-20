@@ -22,7 +22,10 @@ const Book = (props) => {
   }
 
   const handleFinish = () => {
-    props.finishBook(props.book.id)
+    const bookId = props.book.id
+    const goal = props.goals[0].attributes.total
+    const goalId = props.goals[0].id
+    props.finishBook(bookId, goal, goalId)
   }
 
   const renderButtons = () => {
