@@ -63,7 +63,6 @@ const Goal = (props) => {
 
   const renderGoalContent = () => {
     if (props.goals.length > 0) {
-      const goal = props.goals[0]
       return (
         <div>
           {renderYearlyGoal()}
