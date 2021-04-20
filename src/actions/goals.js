@@ -7,3 +7,22 @@ export const loadGoals = () => {
       })
   }
 }
+
+export const addGoal = (goal) => {
+  return dispatch => {
+    const body = {
+      total: goal
+    }
+    fetch('http://localhost:3001/goals', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    })
+      .then(resp => resp.json())
+      .then(newGoal => {
+        dispatch({type: 'ADD_GOAL', payload: newGoal.data})
+      })
+  }
+}
