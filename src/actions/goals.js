@@ -26,3 +26,22 @@ export const addGoal = (goal) => {
       })
   }
 }
+
+export const updateGoal = (goal, id) => {
+  return dispatch => {
+    const body = {
+      total: goal
+    }
+    fetch(`http://localhost:3001/goals/${id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    })
+      .then(resp => resp.json())
+      .then(updatedGoal => {
+        dispatch({type: 'UPDATE_GOAL', payload: updatedGoal.data})
+      })
+  }
+}
