@@ -1,5 +1,6 @@
 import React from 'react'
 import Goal from '../components/Goal'
+import GoalNewForm from '../components/GoalNewForm'
 import { Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 
@@ -8,6 +9,8 @@ class GoalContainer extends React.Component {
     return(
       <div>
         <Route exact path={'/'} render={routerProps => <Goal {...routerProps} books={this.props.books.filter(book => book.attributes.finished === true)} goals={this.props.goals}/>}/>
+        <Route exact path={'/goals/new'} render={routerProps => <GoalNewForm goals={this.props.goals} />}/>
+        <Route exact path={'/goals/:id/edit'} render={routerProps => <GoalNewForm goals={this.props.goals} />}/>
       </div>
     )
   }
