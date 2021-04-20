@@ -13,7 +13,13 @@ class GoalNewForm extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-    this.props.addGoal(this.state.goal)
+
+    if (this.props.addGoal) {
+      this.props.addGoal(this.state.goal)
+    } else {
+      const id = this.props.goals[0].id
+      this.props.updateGoal(this.state.goal, id)
+    }
     this.props.history.push('/')
   }
 
