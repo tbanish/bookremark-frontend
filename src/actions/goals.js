@@ -45,3 +45,14 @@ export const updateGoal = (goal, id) => {
       })
   }
 }
+
+export const deleteGoal = (id) => {
+  return dispatch => {
+    fetch(`http://localhost:3001/goals/${id}`, {
+      method: 'DELETE'
+    })
+      .then(resp => {
+        dispatch({type: 'DELETE_GOAL', payload: id})
+      })
+  }
+}
