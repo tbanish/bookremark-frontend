@@ -1,3 +1,5 @@
+import { updateGoal } from './goals.js'
+
 const booksEndpoint = 'http://localhost:3001/books'
 
 export const loadBooks = () => {
@@ -61,12 +63,12 @@ export const deleteBook = (id) => {
   }
 }
 
-export const finishBook = (id) => {
+export const finishBook = (bookId, goal, goalId) => {
     const body = {
       finished: true
     }
   return dispatch => {
-    fetch(booksEndpoint+`/${id}`, {
+    fetch(booksEndpoint+`/${bookId}`, {
       method: 'PATCH',
       headers: {
         "Content-Type": "application/json"
@@ -76,6 +78,7 @@ export const finishBook = (id) => {
       .then(resp => resp.json())
       .then(finishedBook => {
         dispatch({type: 'FINISH_BOOK', payload: finishedBook.data})
+        dispatch(updateGoal(goal, goalId))
       })
   }
 }
