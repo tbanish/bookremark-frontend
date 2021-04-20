@@ -6,6 +6,8 @@ export const goals = (state = [], action) => {
       return [action.payload]
     case 'UPDATE_GOAL':
       return [action.payload]
+    case 'DELETE_GOAL':
+      return state.filter(goal => goal.id !== action.payload)
     default:
       return state
   }
