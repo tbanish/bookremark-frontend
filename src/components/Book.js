@@ -1,6 +1,6 @@
 import React from 'react'
 import NoteList from './NoteList.js'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 
 const Book = (props) => {
   const renderLinks = () => {
@@ -14,9 +14,15 @@ const Book = (props) => {
 
   const handleClick = () => {
     const bookId = props.book.id
-    const goal = props.goals[0].attributes.total
-    const goalId = props.goals[0].id
-    props.deleteBook(bookId, goal, goalId)
+
+    if (props.goals.length > 0) {
+      const goal = props.goals[0].attributes.total
+      const goalId = props.goals[0].id
+      props.deleteBook(bookId, goal, goalId)
+    } else {
+      props.deleteBook(bookId)
+    }
+
     props.deleteReadingSessions(props.book.id)
     for (const readingSession of props.readingSessions) {
       props.deleteNotes(readingSession.id)
@@ -48,13 +54,25 @@ const Book = (props) => {
     }
   }
 
+  const renderBookContent = () => {
+    if (props.book !== undefined) {
+      return (
+        <>
+          <h1>{props.book && props.book.attributes.title}</h1>
+          <p>By {props.book && props.book.attributes.author}</p>
+          {renderButtons()}<br/><br/>
+          {renderLinks()}<br/>
+          <NoteList book={props.book} notes={props.notes}/>
+        </>
+      )
+    } else {
+      return <Redirect to={'/'}/>
+    }
+  }
+
   return(
     <div>
-      <h1>{props.book && props.book.attributes.title}</h1>
-      <p>By {props.book && props.book.attributes.author}</p>
-      {renderButtons()}<br/><br/>
-      {renderLinks()}<br/>
-      <NoteList book={props.book} notes={props.notes}/>
+      {renderBookContent()}
     </div>
   )
 }
