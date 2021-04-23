@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 
 const Note = (props) => {
   const renderLinks = () => {
@@ -11,12 +11,24 @@ const Note = (props) => {
     props.history.push(`/books/${props.note.bookId}`)
   }
 
+  const renderContent = () => {
+    if (props.note) {
+      return (
+        <>
+          <h1>{props.note && props.note.title}</h1>
+          <p>{props.note && props.note.content}</p><br/>
+          <input onClick={() => handleClick()} type="button" value="delete"/><br/><br/>
+          {renderLinks()}
+        </>
+      )
+    } else {
+      return <Redirect to="/"/>
+    }
+  }
+
   return(
     <div>
-      <h1>{props.note && props.note.title}</h1>
-      <p>{props.note && props.note.content}</p><br/>
-      <input onClick={() => handleClick()} type="button" value="delete"/><br/><br/>
-      {renderLinks()}
+      {renderContent()}
     </div>
   )
 }
