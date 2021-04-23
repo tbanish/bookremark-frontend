@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import {Redirect} from 'react-router-dom'
 
 class ReadingSessionEditForm extends React.Component {
   state = {
@@ -27,15 +28,27 @@ class ReadingSessionEditForm extends React.Component {
     this.props.history.push(`/books/${readingSession.book_id}/reading-sessions/${this.props.readingSession.id}`)
   }
 
+  renderContent = () => {
+    if (this.props.readingSession) {
+      return (
+        <>
+          <p>Duration: {this.state.duration}</p>
+          <p>Date: {this.state.date}</p>
+          <form onSubmit={this.handleSubmit}>
+            Title: <input onChange={this.handleChange} type="text" name="title" value={this.state.title}/><br/><br/>
+            <input type="submit" value="update reading session" />
+          </form>
+        </>
+      )
+    } else {
+      return <Redirect to="/"/>
+    }
+  }
+
   render() {
     return(
       <div>
-        <p>Duration: {this.state.duration}</p>
-        <p>Date: {this.state.date}</p>
-        <form onSubmit={this.handleSubmit}>
-          Title: <input onChange={this.handleChange} type="text" name="title" value={this.state.title}/><br/><br/>
-          <input type="submit" value="update reading session" />
-        </form>
+        {this.renderContent()}
       </div>
     )
   }
