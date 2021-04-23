@@ -32,9 +32,14 @@ const Book = (props) => {
 
   const handleFinish = () => {
     const bookId = props.book.id
-    const goal = props.goals[0].attributes.total
-    const goalId = props.goals[0].id
-    props.finishBook(bookId, goal, goalId)
+
+    if (props.goal !== undefined) {
+      const goal = props.goals[0].attributes.total
+      const goalId = props.goals[0].id
+      props.finishBook(bookId, goal, goalId)
+    } else {
+      props.finishBook(bookId)
+    }
   }
 
   const renderButtons = () => {
