@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 
 const ReadingSession = (props) => {
   const renderLinks = () => {
@@ -32,14 +32,26 @@ const ReadingSession = (props) => {
     )
   }
 
+  const renderReadingSessionContent = () => {
+    if (props.readingSession !== undefined) {
+      return (
+        <>
+          <h1>{props.readingSession && props.readingSession.title}</h1>
+          {renderLinks()}<br/><br/>
+          <p>Date: {props.readingSession && props.readingSession.date}</p>
+          <p>Duration: {props.readingSession && props.readingSession.duration} minutes</p>
+          <input onClick={() => handleClick()} type="button" value="delete"/><br/>
+          {renderNotes()}
+        </>
+      )
+    } else {
+      return <Redirect to="/"/>
+    }
+  }
+
   return(
     <div>
-      <h1>{props.readingSession && props.readingSession.title}</h1>
-      {renderLinks()}<br/><br/>
-      <p>Date: {props.readingSession && props.readingSession.date}</p>
-      <p>Duration: {props.readingSession && props.readingSession.duration} minutes</p>
-      <input onClick={() => handleClick()} type="button" value="delete"/><br/>
-      {renderNotes()}
+      {renderReadingSessionContent()}
     </div>
   )
 }
