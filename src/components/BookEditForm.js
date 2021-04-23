@@ -1,4 +1,5 @@
 import React from 'react'
+import {Redirect} from 'react-router-dom'
 
 class BookEditForm extends React.Component {
   state = {
@@ -19,16 +20,29 @@ class BookEditForm extends React.Component {
     this.props.history.push(`/books/${this.props.match.params.id}`)
   }
 
+  renderContent = () => {
+
+    if (this.props.book) {
+      return (
+        <>
+          <h1>Edit Book</h1>
+          <form onSubmit={this.handleSubmit}>
+            <input onChange={this.handleChange}type="text" name="title" value={this.state.title} placeholder="title"/><br/><br/>
+            <input onChange={this.handleChange}type="text" name="author" value={this.state.author} placeholder="author"/><br/><br/>
+            <input type="submit" value="edit book" />
+          </form>
+        </>
+      )
+    } else {
+      return <Redirect to="/"/>
+    }
+  }
+
   render() {
 
     return(
-      <div className="BookNewForm">
-        <h1>Edit Book</h1>
-        <form onSubmit={this.handleSubmit}>
-          <input onChange={this.handleChange}type="text" name="title" value={this.state.title} placeholder="title"/><br/><br/>
-          <input onChange={this.handleChange}type="text" name="author" value={this.state.author} placeholder="author"/><br/><br/>
-          <input type="submit" value="edit book" />
-        </form>
+      <div>
+        {this.renderContent()}
       </div>
     )
   }
