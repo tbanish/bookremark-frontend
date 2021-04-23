@@ -25,7 +25,7 @@ class GoalNewForm extends React.Component {
 
   renderOptions = () => {
     let options = []
-    for (let i = 1; i < 999; i++) {
+    for (let i = 1; i < 1000; i++) {
       options.push(<option key={i} value={i}>{i}</option>)
     }
     return options
