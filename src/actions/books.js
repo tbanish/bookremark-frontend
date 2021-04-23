@@ -61,7 +61,11 @@ export const deleteBook = (bookId, goal, goalId) => {
     })
       .then(resp => {
         dispatch({type: 'DELETE_BOOK', payload: bookId})
-        dispatch(updateGoal(goal, goalId))
+        
+        if (goal) {
+          dispatch(updateGoal(goal, goalId))
+        }
+
       })
   }
 }
