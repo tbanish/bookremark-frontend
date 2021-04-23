@@ -33,13 +33,14 @@ const Book = (props) => {
   const handleFinish = () => {
     const bookId = props.book.id
 
-    if (props.goal !== undefined) {
+    if (props.goals.length > 0) {
       const goal = props.goals[0].attributes.total
       const goalId = props.goals[0].id
       props.finishBook(bookId, goal, goalId)
     } else {
       props.finishBook(bookId)
     }
+    props.history.push("/books/bookshelf")
   }
 
   const renderButtons = () => {
