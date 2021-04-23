@@ -1,4 +1,5 @@
 import React from 'react'
+import {Redirect} from 'react-router-dom'
 
 class NoteEditForm extends React.Component {
   state = {
@@ -24,15 +25,27 @@ class NoteEditForm extends React.Component {
     this.props.history.push(`/books/${this.props.note.bookId}/notes/${this.props.note.id}`)
   }
 
-  render() {
-    return(
-      <div>
+  renderContent = () => {
+    if (this.props.note) {
+      return (
+        <>
         <h1>Edit Note</h1>
         <form onSubmit={this.handleSubmit}>
           <input onChange={this.handleChange} type="text" name="title" value={this.state.title} placeholder="title"/><br/><br/>
           <textarea onChange={this.handleChange} type="text" name="content" value={this.state.content} rows={15} cols={60} placeholder="content"/><br/><br/>
           <input type="submit" name="submit" value="edit note"/>
         </form>
+        </>
+      )
+    } else {
+      return <Redirect to="/"/>
+    }
+  }
+
+  render() {
+    return(
+      <div>
+        {this.renderContent()}
       </div>
     )
   }
