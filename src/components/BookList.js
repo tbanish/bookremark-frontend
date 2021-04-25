@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../css/BookList.css'
+import { BsBookHalf } from "react-icons/bs";
 
 const BookList = (props) => {
   const renderBooks = () => {
@@ -12,6 +13,7 @@ const BookList = (props) => {
         <div>
           <h2>Nothing to read?</h2>
           <p>Click <Link to="/books/new">here</Link> to start adding books to your reading list.</p>
+          <BsBookHalf className="BsBookHalf" />
         </div>
       )
     }
