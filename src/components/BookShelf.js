@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import '../css/BookShelf.css'
 
 const BookShelf = (props) => {
   const renderBooks = () => {
