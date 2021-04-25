@@ -1,0 +1,13 @@
+.ReadingSessionNewForm {
+  margin: 5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#col2 > h3 {
+  text-align: center;
+}
+
+#col2 {
+  overflow: auto;
+}
