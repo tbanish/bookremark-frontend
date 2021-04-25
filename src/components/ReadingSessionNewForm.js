@@ -1,5 +1,6 @@
 import React from 'react'
 import Timer from './Timer.js'
+import TodaysDate from './TodaysDate.js'
 import uuid from 'uuid'
 import '../css/ReadingSessionNewForm.css'
 
@@ -93,6 +94,7 @@ class ReadingSessionNewForm extends React.Component {
       <div className="ReadingSessionNewForm">
         <div id="newReadingSessioncol1">
           <h1>New Reading Session</h1>
+          <TodaysDate />
           <form id="readingSessionForm" onSubmit={this.handleSubmit}>
             <input onChange={this.handleChange} type="text" name="title" value={this.state.title} placeholder="title"/><br/><br/>
             <Timer setDuration={this.setDuration}/><br/>
