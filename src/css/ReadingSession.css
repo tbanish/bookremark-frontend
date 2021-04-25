@@ -5,11 +5,11 @@
   column-gap: 200px;
 }
 
-#col1 {
+#readingSessioncol1 {
   text-align: left;
 }
 
-#col2 {
+#readingSessioncol2 {
   max-height: 500px;
   overflow: auto;
 }

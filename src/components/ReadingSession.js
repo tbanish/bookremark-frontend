@@ -37,14 +37,14 @@ const ReadingSession = (props) => {
     if (props.readingSession !== undefined) {
       return (
         <>
-          <div id="col1">
+          <div id="readingSessioncol1">
             <h1>{props.readingSession && props.readingSession.title}</h1>
             {renderLinks()}<br/><br/>
             <p>Date: {props.readingSession && props.readingSession.date}</p>
             <p>Duration: {props.readingSession && props.readingSession.duration} minutes</p>
             <input onClick={() => handleClick()} type="button" value="delete"/><br/>
           </div>
-          <div id="col2">
+          <div id="readingSessioncol2">
             {renderNotes()}
           </div>
         </>
