@@ -1,0 +1,13 @@
+.NoMatch {
+  text-align: center;
+  margin: 5%;
+}
+
+.NoMatch > h1 {
+  font-size: 3.75em;
+}
+
+.FaBookDead {
+  font-size: 10em;
+  margin-top: 50px;
+}
