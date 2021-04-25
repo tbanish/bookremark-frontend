@@ -20,7 +20,7 @@ class App extends React.Component {
     return(
       <div className="App">
         <NavBar />
-        <TodaysDate />
+
         <Switch>
           <Route exact path={["/books/reading-list", "/books/bookshelf", "/books/new", "/books/:id", "/books/:id/edit", "/books/:id/notes/:id", "/books/:id/notes/:id/edit"]} ><BooksContainer /></Route>
           <Route exact path={[`/books/:id/reading-sessions`, `/books/:id/reading-sessions/new`, `/books/:id/reading-sessions/:id`, `/books/:id/reading-sessions/:id/edit`]} ><ReadingSessionContainer /></Route>
