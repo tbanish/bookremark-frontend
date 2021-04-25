@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import {Redirect} from 'react-router-dom'
+import '../css/ReadingSessionEditForm.css'
 
 class ReadingSessionEditForm extends React.Component {
   state = {
@@ -32,6 +33,7 @@ class ReadingSessionEditForm extends React.Component {
     if (this.props.readingSession) {
       return (
         <>
+          <h1>Reading Session Edit Form</h1>
           <p>Duration: {this.state.duration}</p>
           <p>Date: {this.state.date}</p>
           <form onSubmit={this.handleSubmit}>
@@ -47,7 +49,7 @@ class ReadingSessionEditForm extends React.Component {
 
   render() {
     return(
-      <div>
+      <div className="ReadingSessionEditForm">
         {this.renderContent()}
       </div>
     )
