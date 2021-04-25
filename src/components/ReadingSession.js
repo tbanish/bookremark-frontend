@@ -38,7 +38,7 @@ const ReadingSession = (props) => {
       return (
         <>
           <div id="readingSessioncol1">
-            <h1>{props.readingSession && props.readingSession.title}</h1>
+            <h2>{props.readingSession && props.readingSession.title}</h2>
             {renderLinks()}<br/><br/>
             <p>Date: {props.readingSession && props.readingSession.date}</p>
             <p>Duration: {props.readingSession && props.readingSession.duration} minutes</p>
