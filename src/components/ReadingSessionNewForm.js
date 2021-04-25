@@ -1,6 +1,7 @@
 import React from 'react'
 import Timer from './Timer.js'
 import uuid from 'uuid'
+import '../css/ReadingSessionNewForm.css'
 
 class ReadingSessionNewForm extends React.Component {
   state = {
