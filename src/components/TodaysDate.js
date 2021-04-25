@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { setDate } from '../actions/date.js'
+import '../css/TodaysDate.css'
 
 class TodaysDate extends React.Component {
   renderDate() {
