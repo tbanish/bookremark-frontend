@@ -66,11 +66,18 @@ const Book = (props) => {
     if (props.book !== undefined) {
       return (
         <>
-          <h1>{props.book && props.book.attributes.title}</h1>
-          <p>By {props.book && props.book.attributes.author}</p>
-          {renderButtons()}<br/><br/>
-          {renderLinks()}<br/>
-          <NoteList book={props.book} notes={props.notes}/>
+          <div id="bookcol1">
+            <NoteList book={props.book} notes={props.notes}/>
+          </div>
+          <div id="bookcol2">
+            <h1>{props.book && props.book.attributes.title}</h1>
+            <p>By {props.book && props.book.attributes.author}</p>
+            {renderButtons()}
+          </div>
+          <div id="bookcol3">
+            {renderLinks()}
+          </div>
+
         </>
       )
     } else {
