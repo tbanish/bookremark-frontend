@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, Redirect } from 'react-router-dom'
+import '../css/Note.css'
 
 const Note = (props) => {
   const renderLinks = () => {
@@ -27,7 +28,7 @@ const Note = (props) => {
   }
 
   return(
-    <div>
+    <div className="Note">
       {renderContent()}
     </div>
   )
