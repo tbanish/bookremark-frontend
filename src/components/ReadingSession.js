@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, Redirect } from 'react-router-dom'
+import '../css/ReadingSession.css'
 
 const ReadingSession = (props) => {
   const renderLinks = () => {
@@ -36,12 +37,16 @@ const ReadingSession = (props) => {
     if (props.readingSession !== undefined) {
       return (
         <>
-          <h1>{props.readingSession && props.readingSession.title}</h1>
-          {renderLinks()}<br/><br/>
-          <p>Date: {props.readingSession && props.readingSession.date}</p>
-          <p>Duration: {props.readingSession && props.readingSession.duration} minutes</p>
-          <input onClick={() => handleClick()} type="button" value="delete"/><br/>
-          {renderNotes()}
+          <div id="col1">
+            <h1>{props.readingSession && props.readingSession.title}</h1>
+            {renderLinks()}<br/><br/>
+            <p>Date: {props.readingSession && props.readingSession.date}</p>
+            <p>Duration: {props.readingSession && props.readingSession.duration} minutes</p>
+            <input onClick={() => handleClick()} type="button" value="delete"/><br/>
+          </div>
+          <div id="col2">
+            {renderNotes()}
+          </div>
         </>
       )
     } else {
@@ -50,7 +55,7 @@ const ReadingSession = (props) => {
   }
 
   return(
-    <div>
+    <div className="ReadingSession">
       {renderReadingSessionContent()}
     </div>
   )
