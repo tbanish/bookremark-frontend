@@ -1,6 +1,7 @@
 import React from 'react'
 import NoteList from './NoteList.js'
 import { Link, Redirect } from 'react-router-dom'
+import '../css/Book.css'
 
 const Book = (props) => {
   const renderLinks = () => {
