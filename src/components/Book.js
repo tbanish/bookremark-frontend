@@ -78,7 +78,7 @@ const Book = (props) => {
   }
 
   return(
-    <div>
+    <div className="Book">
       {renderBookContent()}
     </div>
   )
