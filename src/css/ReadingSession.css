@@ -1,0 +1,15 @@
+.ReadingSession {
+  margin: 5%;
+  display: grid;
+  grid-template-columns: .5fr 1.5fr;
+  column-gap: 200px;
+}
+
+#col1 {
+  text-align: left;
+}
+
+#col2 {
+  max-height: 500px;
+  overflow: auto;
+}
