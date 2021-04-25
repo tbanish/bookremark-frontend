@@ -33,7 +33,7 @@ class GoalNewForm extends React.Component {
 
   render() {
     return(
-      <div>
+      <div className="GoalForm">
         <h1>Set Yearly Book Goal</h1>
         <p>How many books would you like to read this year?</p>
         <form onSubmit={this.handleSubmit}>
