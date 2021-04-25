@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../css/Goal.css'
+import { GiStairsGoal } from "react-icons/gi";
 
 const Goal = (props) => {
   const renderFinishedBooks = () => {
@@ -78,6 +79,9 @@ const Goal = (props) => {
             <h2>Yearly Reading Goal</h2>
             <p>Start your reading habit by setting your yearly goal.</p>
             <Link to={`/goals/new`}>Set Goal</Link>
+            <div className="GiStairsGoal">
+              <GiStairsGoal />
+            </div>
           </div>
         )
       }
