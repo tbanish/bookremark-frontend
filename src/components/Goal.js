@@ -83,7 +83,7 @@ const Goal = (props) => {
     }
 
   return (
-    <div>
+    <div className="Goal">
       {renderGoalContent()}
     </div>
   )
