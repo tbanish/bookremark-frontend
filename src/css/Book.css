@@ -1,4 +1,17 @@
 .Book {
-  text-align: center;
   margin: 5%;
+  display: grid;
+  grid-template-columns: .25fr 1fr .25fr;
+  text-align: center;
+}
+
+#bookcol1,
+#bookcol3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#bookcol2 {
+  font-size: 2em;
 }
