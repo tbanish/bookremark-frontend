@@ -14,7 +14,7 @@ const ReadingSessionList = (props) => {
   }
 
   return(
-    <div className="ReadingSessList">
+    <div className="ReadingSessionList">
       <h1>Reading Sessions</h1>
       {renderLinks()}<br/><br/>
       {renderReadingSessions()}
