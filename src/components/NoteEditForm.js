@@ -1,5 +1,6 @@
 import React from 'react'
 import {Redirect} from 'react-router-dom'
+import '../css/NoteEditForm.css'
 
 class NoteEditForm extends React.Component {
   state = {
@@ -44,7 +45,7 @@ class NoteEditForm extends React.Component {
 
   render() {
     return(
-      <div>
+      <div className="NoteEditForm">
         {this.renderContent()}
       </div>
     )
