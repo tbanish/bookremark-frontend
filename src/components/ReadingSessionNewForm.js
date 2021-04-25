@@ -64,7 +64,7 @@ class ReadingSessionNewForm extends React.Component {
 
     if (notes.length > 0) {
       return notes.map(note =>
-        <div key={note.id} onDoubleClick={this.handleDoubleClick}>
+        <div className="sessionNotes" key={note.id} onDoubleClick={this.handleDoubleClick}>
           <h4>{note.title}</h4>
           <p id={note.id}>{note.content}</p>
           <input id={note.id} onClick={this.handleClick} type="button" value="delete"/>
@@ -89,19 +89,25 @@ class ReadingSessionNewForm extends React.Component {
 
   render() {
     return(
-      <div>
-        <h1>New Reading Session</h1>
-        <form onSubmit={this.handleSubmit}>
-          <input onChange={this.handleChange} type="text" name="title" value={this.state.title} placeholder="title"/><br/><br/>
-          <Timer setDuration={this.setDuration}/><br/>
-          <input type="submit" value="end session"/>
-        </form>
-        <form onSubmit={this.handleNoteSubmit} onKeyDown={this.handleKeyDown} ><br/><br/>
-          <input onChange={this.handleChange} type="text" name="noteTitle" value={this.state.noteTitle} placeholder="give your note a title"/><br/><br/>
-          <textarea onChange={this.handleChange} type="text" name="noteContent" rows={15} cols={60} value={this.state.noteContent} placeholder="add some notes here ..."/><br/><br/>
-          <input type="submit" value="add note"/>
-        </form>
-        {this.renderNotes()}
+      <div className="ReadingSessionNewForm">
+        <div id="col1">
+          <h1>New Reading Session</h1>
+          <form id="readingSessionForm" onSubmit={this.handleSubmit}>
+            <input onChange={this.handleChange} type="text" name="title" value={this.state.title} placeholder="title"/><br/><br/>
+            <Timer setDuration={this.setDuration}/><br/>
+            <input type="submit" value="end session"/>
+          </form>
+          <form id="noteForm" onSubmit={this.handleNoteSubmit} onKeyDown={this.handleKeyDown} ><br/><br/>
+            <input onChange={this.handleChange} type="text" name="noteTitle" value={this.state.noteTitle} placeholder="give your note a title"/><br/><br/>
+            <textarea onChange={this.handleChange} type="text" name="noteContent" rows={15} cols={60} value={this.state.noteContent} placeholder="add some notes here ..."/><br/><br/>
+            <input type="submit" value="add note"/>
+          </form>
+        </div>
+
+        <div id="col2">
+          <h3>Session Notes</h3>
+          {this.renderNotes()}
+      </div>
       </div>
     )
   }
