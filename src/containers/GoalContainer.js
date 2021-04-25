@@ -4,6 +4,7 @@ import GoalNewForm from '../components/GoalNewForm'
 import { Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { addGoal, updateGoal, deleteGoal } from '../actions/goals.js'
+import '../css/GoalContainer.css'
 
 class GoalContainer extends React.Component {
   render() {
