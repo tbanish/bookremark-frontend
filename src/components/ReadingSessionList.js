@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import '../css/ReadingSessionList.css'
 
 const ReadingSessionList = (props) => {
   const renderReadingSessions = () => {
@@ -13,7 +14,7 @@ const ReadingSessionList = (props) => {
   }
 
   return(
-    <div>
+    <div className="ReadingSessList">
       <h1>Reading Sessions</h1>
       {renderLinks()}<br/><br/>
       {renderReadingSessions()}
