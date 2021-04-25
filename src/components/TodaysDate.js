@@ -20,7 +20,7 @@ class TodaysDate extends React.Component {
 
   render() {
     return(
-      <div>
+      <div className="TodaysDate">
         <p>{this.renderDate()}</p>
       </div>
     )
