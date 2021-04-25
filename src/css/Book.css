@@ -1,5 +1,5 @@
 .Book {
-  margin: 5%;
+  min-height: 800px;
   display: grid;
   grid-template-columns: .25fr 1fr .25fr;
   text-align: center;
@@ -9,9 +9,31 @@
 #bookcol3 {
   display: flex;
   justify-content: center;
-  align-items: center;
+  padding-top: 20%;
+  background-color: #f0f3e8;
+}
+
+#bookcol1 li {
+  list-style: none;
+  text-align: left;
+  padding: 10px;
+}
+
+#bookcol1 a,
+#bookcol3 a {
+  text-decoration: none;
+  color: #854370;
+}
+
+#bookcol1 a:hover,
+#bookcol3 a:hover {
+  color: #8ac4a1;
 }
 
 #bookcol2 {
   font-size: 2em;
+}
+
+#bookcol3 {
+  text-align: left;
 }
