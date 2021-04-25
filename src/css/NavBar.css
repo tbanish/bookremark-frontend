@@ -1,6 +1,16 @@
 .NavBar {
   text-align: right;
   border-bottom: 1px solid lightgrey;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  background-color: #416283;
+  padding: 20px;
+}
+
+.NavBar > a {
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  color: #8ac4a1;
 }
