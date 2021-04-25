@@ -9,5 +9,6 @@
 }
 
 #newReadingSessioncol2 {
+  max-height: 530px;
   overflow: auto;
 }
