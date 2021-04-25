@@ -41,7 +41,7 @@ class BookEditForm extends React.Component {
   render() {
 
     return(
-      <div>
+      <div className="BookEditForm">
         {this.renderContent()}
       </div>
     )
