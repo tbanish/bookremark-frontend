@@ -4,10 +4,10 @@
   grid-template-columns: 1fr 1fr;
 }
 
-#col2 > h3 {
+#newReadingSessioncol2 > h3 {
   text-align: center;
 }
 
-#col2 {
+#newReadingSessioncol2 {
   overflow: auto;
 }

@@ -91,7 +91,7 @@ class ReadingSessionNewForm extends React.Component {
   render() {
     return(
       <div className="ReadingSessionNewForm">
-        <div id="col1">
+        <div id="newReadingSessioncol1">
           <h1>New Reading Session</h1>
           <form id="readingSessionForm" onSubmit={this.handleSubmit}>
             <input onChange={this.handleChange} type="text" name="title" value={this.state.title} placeholder="title"/><br/><br/>
@@ -105,7 +105,7 @@ class ReadingSessionNewForm extends React.Component {
           </form>
         </div>
 
-        <div id="col2">
+        <div id="newReadingSessioncol2">
           <h3>Session Notes</h3>
           {this.renderNotes()}
       </div>
