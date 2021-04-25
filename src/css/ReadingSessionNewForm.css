@@ -1,7 +1,10 @@
 .ReadingSessionNewForm {
-  margin: 5%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
+}
+
+#newReadingSessioncol1 {
+  margin-left: 5%;
 }
 
 #newReadingSessioncol2 > h3 {
@@ -9,6 +12,14 @@
 }
 
 #newReadingSessioncol2 {
-  max-height: 530px;
+  min-height: 660px;
+  max-height: 660px;
   overflow: auto;
+  background-color: #f0f3e8;
+}
+
+.sessionNotes {
+  margin: 5%;
+  background-color: white;
+  padding: 20px;
 }
