@@ -4,13 +4,18 @@ import { GiStairsGoal } from "react-icons/gi";
 import { ImBooks } from "react-icons/im";
 import { IoIosTimer } from "react-icons/io";
 
-const Home = () => {
+const Home = (props) => {
+
+  const handleClick = () => {
+    props.history.push('/books/new')
+  }
+
   return(
     <div className="Home">
       <div className="hero">
         <h1>Book Remark</h1>
         <p>Build your reading habit one book at a time.</p>
-        <button className="getStarted">Get Started</button>
+        <button onClick={handleClick} className="getStarted">Get Started</button>
       </div>
       <div className="contentGrid">
         <div className="contentGridcol"id="contentGridcol1">
