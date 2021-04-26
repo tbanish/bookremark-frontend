@@ -1,14 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap');
+
 .NavBar {
   text-align: right;
-  border-bottom: 1px solid lightgrey;
   background-color: #416283;
   padding: 15px;
+  padding-bottom: 30px;
 }
 
 .NavBar > a {
   padding: 10px;
   text-decoration: none;
   color: white;
+  text-align: center;
+  font-size: 18px;
+  transition: 0.3s;
 }
 
 a:hover {
@@ -17,9 +22,18 @@ a:hover {
 
 .GiRead {
   float: left;
-  font-size: 2.5em;
+  font-size: 2em;
   color: #8ac4a1;
   display: flex;
   justify-content: center;
   margin-left: 20px;
+}
+
+#logo {
+  float: left;
+  font-family: 'Original Surfer', cursive;
+  font-size: 18px;
+  padding-left: 20px;
+  text-align: center;
+  color: #8ac4a1;
 }
