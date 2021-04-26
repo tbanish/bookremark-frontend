@@ -41,7 +41,7 @@ class GoalNewForm extends React.Component {
           <select value={this.state.goal} name="goal" onChange={this.handleChange}>
             {this.renderOptions()}
           </select><br/><br/>
-          <input type="submit" value="set goal"/>
+        <input id="goalbtn" type="submit" value="set goal"/>
         </form>
       </div>
     )
