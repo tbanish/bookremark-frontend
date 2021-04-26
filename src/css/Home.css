@@ -57,3 +57,16 @@
   color: #5d2e4e;
   padding-left: 75px;
 }
+
+footer {
+  height: 100px;
+  background: #323232;
+  width: 100%;
+  bottom:0;
+}
+
+#copyright {
+  color: #ffffff;
+  padding-top: 40px;
+  padding-left: 20px;
+}
