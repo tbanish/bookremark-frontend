@@ -6,3 +6,15 @@
   padding-bottom: 100px;
   text-align: center;
 }
+
+.hero h1 {
+  font-family: 'Original Surfer', cursive;
+  font-size: 3em;
+  color: #8ac4a1;
+}
+
+.hero p {
+  font-size: 2em;
+  color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+}
