@@ -9,6 +9,7 @@ import TodaysDate from './components/TodaysDate'
 import GoalContainer from './containers/GoalContainer'
 import NoMatch from './components/NoMatch.js'
 import {Route, Switch} from 'react-router-dom'
+import Home from './components/Home'
 
 class App extends React.Component {
 
@@ -20,11 +21,11 @@ class App extends React.Component {
     return(
       <div className="App">
         <NavBar />
-
         <Switch>
+          <Route exact path="/" component={Home}/>
           <Route exact path={["/books/reading-list", "/books/bookshelf", "/books/new", "/books/:id", "/books/:id/edit", "/books/:id/notes/:id", "/books/:id/notes/:id/edit"]} ><BooksContainer /></Route>
           <Route exact path={[`/books/:id/reading-sessions`, `/books/:id/reading-sessions/new`, `/books/:id/reading-sessions/:id`, `/books/:id/reading-sessions/:id/edit`]} ><ReadingSessionContainer /></Route>
-          <Route exact path={['/', '/goals/new', '/goals/:id/edit']} ><GoalContainer /></Route>
+          <Route exact path={['/goals', '/goals/new', '/goals/:id/edit']} ><GoalContainer /></Route>
           <Route exact path="*" component={NoMatch}/>
         </Switch>
       </div>
