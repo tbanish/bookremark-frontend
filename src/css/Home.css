@@ -32,3 +32,17 @@
 .getStarted:hover {
   background-color: white;
 }
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 50px;
+}
+
+.contentGridcol {
+  padding: 15px;
+}
+
+.contentGridcol p {
+  line-height: 30px;
+}
