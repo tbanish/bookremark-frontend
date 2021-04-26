@@ -18,3 +18,17 @@
   color: #ffffff;
   font-family: 'Raleway', sans-serif;
 }
+
+.getStarted {
+  background-color: #8ac4a1;
+  font-family: 'Raleway', sans-serif;
+  border: none;
+  padding: 18px;
+  font-size: 1.2em;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.getStarted:hover {
+  background-color: white;
+}
