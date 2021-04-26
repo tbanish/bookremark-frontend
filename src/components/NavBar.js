@@ -8,6 +8,7 @@ const NavBar = () => {
     <div className="NavBar">
       <GiRead className="GiRead"/><br/>
       <NavLink to="/">Home</NavLink>
+      <NavLink to="/goals">Goal</NavLink>
       <NavLink to="/books/reading-list">Reading List</NavLink>
       <NavLink to="/books/bookshelf">Book Shelf</NavLink>
       <NavLink to="/books/new">Add a Book</NavLink>
