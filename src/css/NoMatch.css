@@ -5,9 +5,11 @@
 
 .NoMatch > h1 {
   font-size: 3.75em;
+  color: red;
 }
 
 .FaBookDead {
   font-size: 10em;
   margin-top: 50px;
+  color: black;
 }
