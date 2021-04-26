@@ -2,3 +2,16 @@
   text-align: center;
   margin: 5%;
 }
+
+#goalbtn {
+  border-radius: 6px;
+  border: none;
+  padding: 10px;
+  background-color: #8ac4a1;
+  transition: 0.3s;
+}
+
+#goalbtn:hover {
+  color: #ffffff;
+  background-color: #715838;
+}
