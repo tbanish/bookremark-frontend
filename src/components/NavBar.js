@@ -6,7 +6,8 @@ import '../css/NavBar.css'
 const NavBar = () => {
   return(
     <div className="NavBar">
-      <GiRead className="GiRead"/><br/>
+      <GiRead className="GiRead"/>
+      <span id="logo">Book Remark</span>
       <NavLink to="/">Home</NavLink>
       <NavLink to="/goals">Goal</NavLink>
       <NavLink to="/books/reading-list">Reading List</NavLink>
