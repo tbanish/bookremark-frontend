@@ -1,15 +1,39 @@
 .ReadingSession {
-  margin: 5%;
   display: grid;
-  grid-template-columns: .5fr 1.5fr;
-  column-gap: 200px;
+  grid-template-columns: .75fr 1.5fr;
 }
 
 #readingSessioncol1 {
   text-align: left;
+  background-color: #f0f3e8;
+  padding: 10%;
+}
+
+#readingSessioncol1 a {
+  text-decoration: none;
+  color: #715838;
+}
+
+#readingSessioncol1 a:hover {
+  color: #8ac4a1;
 }
 
 #readingSessioncol2 {
-  max-height: 500px;
+  direction: rtl;
+  max-height: 100vh;
   overflow: auto;
+  text-align: left;
+  padding-left: 20px;
+  background-color: #5d2e4e;
+}
+
+.readingSessionNote {
+  margin: 30px;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#readingSessionDate {
+  font-size: 1.5em;
 }
