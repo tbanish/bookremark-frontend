@@ -10,3 +10,20 @@
   margin: 100px;
   color: #854370;
 }
+
+.bookShelfGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 150px;
+  row-gap: 10px;
+  margin-left: 45px;
+  margin-right: 45px;
+}
+
+.bookShelfCard {
+  border-left: 10px solid #4c4c4c;
+  padding: 20px;
+  border-radius: 3px;
+  height: 150px;
+  box-shadow: 10px 10px 8px #888888;
+}
