@@ -23,26 +23,47 @@ class BookNewForm extends React.Component {
 
   renderOptions = () => {
     let options = []
-    for (let i = 0; i < 1000; i++) {
+    for (let i = 0; i <= 1000; i++) {
       options.push(<option key={i} value={i}>{i}</option>)
     }
     return options
   }
 
+  renderQuote = () => {
+    return (
+      <p className="quote" id="newBookQuote">“My alma mater was books, a good library…. I could spend the rest of my life reading, just satisfying my curiosity.” – Malcolm X</p>
+    )
+  }
+
   render() {
     return(
       <div className="BookNewForm">
-        <h1>Add a Book</h1>
-        <form onSubmit={this.handleSubmit}>
-          <span className="requiredField">*</span><input onChange={this.handleChange}type="text" name="title" value={this.state.title} placeholder="title"/><br/><br/>
-          <span className="requiredField">*</span><input onChange={this.handleChange}type="text" name="author" value={this.state.author} placeholder="author"/><br/><br/>
-          <label>Page Count: </label>
-          <select value={this.state.pageCount} name="pageCount" onChange={this.handleChange}>
-            {this.renderOptions()}
-          </select><br/><br/>
-          <textarea onChange={this.handleChange} type="text" name="description" rows={20} cols={50}value={this.state.description} placeholder="add a book description (optional)"/><br/>
-          <input type="submit" value="add book" />
-        </form>
+
+        <div className="bookNewFormBanner">
+          <div id="bookNewBannercol1">
+            <h2>expand your</h2>
+            <h1>LIBRARY</h1>
+          </div>
+          <div id="bookNewBannercol2">
+            {this.renderQuote()}
+          </div>
+        </div>
+
+        <div className="bookFormBodyContainer">
+          <div id="newBookFormMessage">
+              <p>Proin facilisis vestibulum dignissim. Duis iaculis, magna sit amet aliquet pretium, nibh sapien laoreet lorem, et congue leo dui vitae augue. Nunc rutrum ante massa, eu interdum urna placerat id. Aliquam ultricies elit urna. Maecenas vel felis neque. Morbi porta, ex in venenatis pretium, libero arcu porttitor ex, nec congue metus sapien ut diam.</p>
+          </div>
+          <form className="bookForm" onSubmit={this.handleSubmit}>
+            <span className="requiredField">*</span><input onChange={this.handleChange}type="text" name="title" value={this.state.title} placeholder="title"/>
+            <span className="requiredField">*</span><input onChange={this.handleChange}type="text" name="author" value={this.state.author} placeholder="author"/>
+            <label>Page Count: </label>
+            <select value={this.state.pageCount} name="pageCount" onChange={this.handleChange}>
+              {this.renderOptions()}
+            </select><br/><br/>
+          <textarea onChange={this.handleChange} type="text" name="description" rows={15} cols={75}value={this.state.description} placeholder="add a book description (optional)"/><br/>
+            <input type="submit" value="add book" />
+          </form>
+        </div>
       </div>
     )
   }
