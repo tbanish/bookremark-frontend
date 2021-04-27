@@ -16,14 +16,18 @@ class BookNewForm extends React.Component {
   }
 
   handleSubmit = (event) => {
-    event.preventDefault()
-    this.props.addBook(this.state)
-    this.props.history.push('/books/reading-list')
+    if (this.state.title === '' || this.state.author === '') {
+      alert("Make sure your book has a title and author.")
+    } else {
+      event.preventDefault()
+      this.props.addBook(this.state)
+      this.props.history.push('/books/reading-list')
+    }
   }
 
   renderOptions = () => {
     let options = []
-    for (let i = 0; i <= 1000; i++) {
+    for (let i = 0; i <= 5000; i++) {
       options.push(<option key={i} value={i}>{i}</option>)
     }
     return options
