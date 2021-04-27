@@ -41,3 +41,15 @@
   letter-spacing: 2px;
   font-size: 3.2em;
 }
+
+.bookShelfBanner {
+  padding-top: 20px;
+  padding-bottom: 18px;
+  background: #d8dad0;
+  margin-bottom: 40px;
+}
+
+#bookShelfQuote {
+  font-size: 2.2em;
+  opacity: 60%;
+}
