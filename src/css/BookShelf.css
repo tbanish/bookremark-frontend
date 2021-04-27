@@ -38,15 +38,22 @@
 .BookShelf h1 {
   color: #854370;
   font-family: 'Montserrat', sans-serif;
-  letter-spacing: 2px;
-  font-size: 3.2em;
+  font-weight: bold;
+  font-size: 6em;
+  margin-bottom: 5px;
+  margin-top: 15px;
 }
 
 .bookShelfBanner {
-  padding-top: 20px;
-  padding-bottom: 18px;
+  padding-top: 5px;
+  padding-bottom: 25px;
   background: #d8dad0;
   margin-bottom: 40px;
+  border-bottom: 10px solid #715838;
+}
+
+.bookShelfBanner p {
+  margin: 0;
 }
 
 #bookShelfQuote {
