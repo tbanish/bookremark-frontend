@@ -27,3 +27,8 @@
   transition: 0.3s;
   font-family: 'Raleway', sans-serif;
 }
+
+#deleteGoalbtn:hover {
+  background-color: #715838;
+  color: #ffffff;
+}
