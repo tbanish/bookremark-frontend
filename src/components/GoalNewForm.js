@@ -21,7 +21,7 @@ class GoalNewForm extends React.Component {
       const id = this.props.goals[0].id
       this.props.updateGoal(this.state.goal, id)
     }
-    this.props.history.push('/')
+    this.props.history.push('/goals')
   }
 
   renderOptions = () => {
