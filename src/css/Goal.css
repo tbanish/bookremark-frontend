@@ -47,3 +47,10 @@
   letter-spacing: 3px;
   background-color: #854370;
 }
+
+.quote {
+  padding-top: 20px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 2em;
+  opacity: 40%;
+}
