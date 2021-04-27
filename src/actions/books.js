@@ -17,7 +17,9 @@ export const loadBooks = () => {
 export const addBook = (book) => {
   const body = {
     title: book.title,
-    author: book.author
+    author: book.author,
+    description: book.description,
+    page_count: book.pageCount
   }
   return dispatch => {
     fetch(booksEndpoint, {
@@ -37,7 +39,9 @@ export const addBook = (book) => {
 export const updateBook = (book, id) => {
   const body = {
     title: book.title,
-    author: book.author
+    author: book.author,
+    description: book.description,
+    page_count: book.pageCount
   }
   return dispatch => {
     fetch(booksEndpoint+`/${id}`, {
