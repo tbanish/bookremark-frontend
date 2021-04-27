@@ -64,3 +64,17 @@
   font-weight: bold;
   color: #854370;
 }
+
+#booksRemaining {
+  padding: 18px;
+}
+
+#goalContentcol1 li {
+  list-style: none;
+  text-align: left;
+  padding-left: 40px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 1em;
+}
