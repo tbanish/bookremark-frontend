@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
 .Goal {
   text-align: center;
@@ -40,12 +41,12 @@
 #goalContentcol2 h2 {
   margin: 0;
   padding-top: 50px;
-  font-size: 2.5em;
+  font-size: 3em;
   padding-bottom: 54px;
   color: #ffffff;
-  font-family: 'Orelega One', cursive;
-  letter-spacing: 3px;
-  background-color: #854370;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 2px;
+  background-color: #5d2e4e;
 }
 
 #goalQuote {
