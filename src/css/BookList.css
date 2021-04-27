@@ -9,3 +9,17 @@
   margin-top: 50px;
   color: #854370;
 }
+
+.BookList h1 {
+  color: #f0f3e8;
+  font-family: 'Orelega One', cursive;
+  letter-spacing: 5px;
+  font-size: 2.5em;
+}
+
+.bookListBanner {
+  padding-top: 20px;
+  padding-bottom: 18px;
+  background: #854370;
+  margin-bottom: 40px;
+}
