@@ -3,6 +3,7 @@ import '../css/Home.css'
 import { GiStairsGoal } from "react-icons/gi";
 import { ImBooks } from "react-icons/im";
 import { IoIosTimer } from "react-icons/io";
+import { GiRead } from "react-icons/gi";
 
 const Home = (props) => {
 
@@ -13,7 +14,7 @@ const Home = (props) => {
   return(
     <div className="Home">
       <div className="hero">
-        <h1>Book Remark</h1>
+        <h1>Book Remark <GiRead /></h1>
         <p>Build your reading habit one book at a time.</p>
         <button onClick={handleClick} className="getStarted">Get Started</button>
       </div>
