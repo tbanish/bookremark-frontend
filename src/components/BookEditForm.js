@@ -5,7 +5,9 @@ import '../css/BookEditForm.css'
 class BookEditForm extends React.Component {
   state = {
     title: this.props.book ? this.props.book.attributes.title : '',
-    author: this.props.book ? this.props.book.attributes.author : ''
+    author: this.props.book ? this.props.book.attributes.author : '',
+    description: this.props.book ? this.props.book.attributes.description : '',
+    pageCount: this.props.book ? this.props.book.attributes.page_count : ''
   }
 
   handleChange = (event) => {
@@ -21,6 +23,14 @@ class BookEditForm extends React.Component {
     this.props.history.push(`/books/${this.props.match.params.id}`)
   }
 
+  renderOptions = () => {
+    let options = []
+    for (let i = 0; i < 1000; i++) {
+      options.push(<option key={i} value={i}>{i}</option>)
+    }
+    return options
+  }
+
   renderContent = () => {
 
     if (this.props.book) {
@@ -30,6 +40,11 @@ class BookEditForm extends React.Component {
           <form onSubmit={this.handleSubmit}>
             <input onChange={this.handleChange}type="text" name="title" value={this.state.title} placeholder="title"/><br/><br/>
             <input onChange={this.handleChange}type="text" name="author" value={this.state.author} placeholder="author"/><br/><br/>
+              <label>Page Count: </label>
+              <select value={this.state.pageCount} name="pageCount" onChange={this.handleChange}>
+                {this.renderOptions()}
+              </select><br/><br/>
+              <textarea onChange={this.handleChange} type="text" name="description" rows={20} cols={50}value={this.state.description} placeholder="add a book description (optional)"/><br/>
             <input type="submit" value="edit book" />
           </form>
         </>
