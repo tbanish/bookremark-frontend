@@ -92,3 +92,13 @@
   background-color: #f0f3e8;
   min-height: 700px;
 }
+
+.Goal a {
+  text-decoration: none;
+  color: #715838;
+  transition: 0.3s;
+}
+
+.Goal a:hover {
+  color: #8ac4a1;
+}
