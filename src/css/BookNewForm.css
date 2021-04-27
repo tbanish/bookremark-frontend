@@ -4,3 +4,18 @@
 .BookNewForm {
   text-align: center;
 }
+
+.bookNewFormBanner {
+  display: grid;
+  grid-template-columns: 1.5fr .75fr;
+  background: #4f3d27;
+  margin-bottom: 20px;
+  border-bottom: 10px solid #8ac4a1;
+}
+
+#bookNewBannercol1 {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  height: 75px;
+  padding-right: 210px;
+}
