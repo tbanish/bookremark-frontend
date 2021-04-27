@@ -23,8 +23,8 @@ const BookShelf = (props) => {
       )
     } else {
       return (
-        <div>
-          <p>When you finish a book it will be stored here on your bookshelf where you can always access past notes and reading sessions.</p>
+        <div id="emptyBookShelf">
+          <p id="emptyBookShelfMessage"> When you finish a book it will be stored here on your bookshelf where you can always access past notes and reading sessions.</p>
           <div className="ImBooks"><ImBooks /></div>
         </div>
       )
