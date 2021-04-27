@@ -4,7 +4,7 @@
   text-align: right;
   background-color: #416283;
   padding: 15px;
-  padding-bottom: 30px;
+  padding-bottom: 18px;
 }
 
 .NavBar > a {
@@ -12,7 +12,7 @@
   text-decoration: none;
   color: white;
   text-align: center;
-  font-size: 18px;
+  font-size: 16px;
   transition: 0.3s;
 }
 
@@ -22,7 +22,7 @@ a:hover {
 
 .GiRead {
   float: left;
-  font-size: 2em;
+  font-size: 1.6em;
   color: #8ac4a1;
   display: flex;
   justify-content: center;
@@ -32,7 +32,7 @@ a:hover {
 #logo {
   float: left;
   font-family: 'Original Surfer', cursive;
-  font-size: 18px;
+  font-size: 16px;
   padding-left: 20px;
   text-align: center;
   color: #8ac4a1;
