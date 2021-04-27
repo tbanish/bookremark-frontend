@@ -2,6 +2,9 @@
   min-height: 800px;
   display: grid;
   grid-template-columns: .25fr 1fr .25fr;
+}
+
+.Book h1 {
   text-align: center;
 }
 
@@ -31,7 +34,9 @@
 }
 
 #bookcol2 {
-  font-size: 2em;
+  font-size: 1em;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 #bookcol3 {
