@@ -18,3 +18,12 @@
   padding-top: 15%;
   width: 500px;
 }
+
+#deleteGoalbtn {
+  background-color: #8ac4a1;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  transition: 0.3s;
+  font-family: 'Raleway', sans-serif;
+}
