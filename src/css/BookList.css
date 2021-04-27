@@ -15,14 +15,22 @@
   color: #f0f3e8;
   font-family: 'Montserrat', sans-serif;
   letter-spacing:3px;
-  font-size: 3em;
+  font-weight: bold;
+  font-size: 6em;
+  margin: 0;
+  padding-top: 18px;
 }
 
 .bookListBanner {
-  padding-top: 20px;
-  padding-bottom: 18px;
+  padding-top: 5px;
+  padding-bottom: 25px;
   background-color: #5d2e4e;
   margin-bottom: 40px;
+  border-bottom: 10px solid #8ac4a1;
+}
+
+.bookListBanner p {
+  margin: 0;
 }
 
 .bookListGrid {
