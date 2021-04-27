@@ -19,3 +19,27 @@
   height: 75px;
   padding-right: 210px;
 }
+
+#newBookQuote {
+  font-size: 2em;
+  opacity: 70%;
+  color: #d9d9d9;
+  margin: 0;
+  padding-bottom: 30px;
+  padding-top: 20px;
+  padding-right: 50px;
+}
+
+.bookNewFormBanner h2 {
+  color: #f0f3e8;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  font-size: 2.3em;
+  text-align: left;
+  text-align: center;
+  margin: 0;
+  padding-top: 15px;
+  letter-spacing: 27px;
+  padding-left: 20px;
+  padding-bottom: 17px;
+}
