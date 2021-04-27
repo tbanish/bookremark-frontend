@@ -27,3 +27,17 @@
   height: 150px;
   box-shadow: 10px 10px 8px #888888;
 }
+
+.bookShelfCard a {
+  color: white;
+  letter-spacing: 2.5px;
+  font-family: 'Orelega One', cursive;
+  text-decoration: none;
+}
+
+.BookShelf h1 {
+  color: #854370;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 2px;
+  font-size: 3.2em;
+}
