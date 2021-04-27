@@ -23,7 +23,7 @@ const BookList = (props) => {
       )
     } else {
       return (
-        <div>
+        <div id="emptyBookList">
           <h2>Nothing to read?</h2>
           <p>Click <Link to="/books/new">here</Link> to start adding books to your reading list.</p>
           <BsBookHalf className="BsBookHalf" />
