@@ -23,3 +23,20 @@
   background: #854370;
   margin-bottom: 40px;
 }
+
+.bookListGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 150px;
+  row-gap: 10px;
+  margin-left: 45px;
+  margin-right: 45px;
+}
+
+.bookCard {
+  border-left: 10px solid #4c4c4c;
+  padding: 20px;
+  border-radius: 3px;
+  height: 150px;
+  box-shadow: 10px 10px 8px #888888;
+}
