@@ -73,6 +73,8 @@ const Book = (props) => {
           <div id="bookcol2">
             <h1>{props.book && props.book.attributes.title}</h1>
             <p>By {props.book && props.book.attributes.author}</p>
+            <p>Page Count: {props.book && props.book.attributes.page_count}</p>
+            <p>{props.book && props.book.attributes.description}</p>
             {renderButtons()}
           </div>
           <div id="bookcol3">
