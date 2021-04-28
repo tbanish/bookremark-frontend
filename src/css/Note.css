@@ -1,2 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Raleway&display=swap');
+
+.Note h1 {
+  text-align: center;
+  background: #f0f3e8;
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #854370;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.Note p {
+  margin: 50px 50px 10px 50px;
+  line-height: 30px;
+  margin-left: 100px;
+  margin-right: 100px;
+  border: 10px solid #b8dbc6;
+  box-shadow: 0 0 0 7px #9b8a73;
+  padding: 50px;
+  border-radius: 10px;
+  min-height: 275px;
+  background: #fcfcfa;
+  border-width: 5px;
+}
