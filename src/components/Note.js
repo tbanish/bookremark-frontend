@@ -4,7 +4,7 @@ import '../css/Note.css'
 
 const Note = (props) => {
   const renderLinks = () => {
-    return <Link to={`/books/${props.note && props.note.bookId}/notes/${props.note && props.note.id}/edit`}>Edit</Link>
+    return <Link to={`/books/${props.note && props.note.bookId}/notes/${props.note && props.note.id}/edit`}>edit</Link>
   }
 
   const handleClick = () => {
@@ -18,8 +18,10 @@ const Note = (props) => {
         <>
           <h1>{props.note && props.note.title}</h1>
           <p>{props.note && props.note.content}</p><br/>
-          <input onClick={() => handleClick()} type="button" value="delete"/><br/><br/>
-          {renderLinks()}
+          <div className="noteDeleteEdit">
+            <input onClick={() => handleClick()} type="button" value="delete"/>
+            {renderLinks()}
+          </div>
         </>
       )
     } else {
