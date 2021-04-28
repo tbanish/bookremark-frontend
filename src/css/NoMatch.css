@@ -3,6 +3,17 @@
   margin: 5%;
 }
 
+.NoMatch a {
+  text-decoration: none;
+  color: #715838;
+  transition: 0.3s;
+}
+
+.NoMatch a:hover {
+  color: #8ac4a1;
+  cursor: pointer;
+}
+
 .NoMatch > h1 {
   font-size: 3.75em;
   color: red;
