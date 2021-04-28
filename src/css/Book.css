@@ -72,6 +72,14 @@
   padding: 10px;
   margin: 10px;
   transition: 0.3s;
+  font-family: 'Raleway', sans-serif;
+}
+
+#finishMark {
+  font-style: italic;
+  font-weight: bolder;
+  color: #416283;
+  font-size: 1.1em;
 }
 
 .bookButtons:hover {
