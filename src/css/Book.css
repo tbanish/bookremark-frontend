@@ -31,6 +31,7 @@
 #bookcol1 a:hover,
 #bookcol3 a:hover {
   color: #8ac4a1;
+  cursor: pointer;
 }
 
 #bookcol2 {
