@@ -65,7 +65,7 @@ class BookNewForm extends React.Component {
               {this.renderOptions()}
             </select><br/><br/>
           <textarea onChange={this.handleChange} type="text" name="description" rows={15} cols={75}value={this.state.description} placeholder="add a book description (optional)"/><br/>
-            <input type="submit" value="add book" />
+            <input id="newBookFormbtn" type="submit" value="add book" />
           </form>
         </div>
       </div>
