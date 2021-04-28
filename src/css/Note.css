@@ -72,3 +72,25 @@
   background: #715838;
   cursor: pointer;
 }
+
+.Note {
+  display: grid;
+  grid-template-columns: .25fr 1fr .25fr;
+  min-height: 100vh;
+}
+
+#notecol1, #notecol3 {
+  display: flex;
+  justify-content: center;
+  padding-top: 20%;
+  background-color: #a99a87;
+  height: 100%;
+}
+
+#notecol1 {
+  border-right: 1px solid #7f7f7f;
+}
+
+#notecol3 {
+  border-left: 1px solid #7f7f7f;
+}
