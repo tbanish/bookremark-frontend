@@ -40,3 +40,25 @@
   margin-right: 20px;
   color: black;
 }
+
+.noteDeleteEdit a:hover {
+  color: #ffffff;
+  background: #715838;
+  cursor: pointer;
+}
+
+.noteDeleteEdit input {
+  background: #8ac4a1;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  transition: 0.3s;
+  margin-right: 20px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.noteDeleteEdit input:hover {
+  color: #ffffff;
+  background: #715838;
+  cursor: pointer;
+}
