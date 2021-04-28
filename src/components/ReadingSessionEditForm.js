@@ -6,7 +6,7 @@ import '../css/ReadingSessionEditForm.css'
 class ReadingSessionEditForm extends React.Component {
   state = {
     title: this.props.readingSession ? this.props.readingSession.title : '',
-    date: this.props.date,
+    date: this.props.readingSession ? this.props.readingSession.date : '',
     duration: this.props.readingSession ? this.props.readingSession.duration : ''
   }
 
@@ -34,12 +34,14 @@ class ReadingSessionEditForm extends React.Component {
       return (
         <>
           <h1>Reading Session Edit Form</h1>
-          <p>Duration: {this.state.duration}</p>
-          <p>Date: {this.state.date}</p>
-          <form onSubmit={this.handleSubmit}>
-            Title: <input onChange={this.handleChange} type="text" name="title" value={this.state.title}/><br/><br/>
-            <input type="submit" value="update reading session" />
-          </form>
+          <div className="editFormContainer">
+            <p>Duration: {this.state.duration}</p>
+            <p>Date: {this.state.date}</p>
+            <form onSubmit={this.handleSubmit}>
+              Title: <input onChange={this.handleChange} id="editReadingSessionTitle" type="text" name="title" value={this.state.title}/><br/><br/>
+            <input id="editReadingSessiobtn" type="submit" value="update" />
+            </form>
+          </div>
         </>
       )
     } else {
