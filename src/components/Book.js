@@ -1,15 +1,14 @@
 import React from 'react'
 import NoteList from './NoteList.js'
+import ReadingSessionList from './ReadingSessionList'
 import { Link, Redirect } from 'react-router-dom'
 import '../css/Book.css'
 
 const Book = (props) => {
   const renderLinks = () => {
     return (
-      <div>
-        <h3>Links</h3>
-        <Link to={`/books/${props.book && props.book.id}/reading-sessions/new`}>New Reading Session</Link><br/><br/>
-        <Link to={`/books/${props.book && props.book.id}/reading-sessions`}>Reading Sessions</Link><br/><br/>
+      <div className="bookNavLinks">
+        <Link to={`/books/${props.book && props.book.id}/reading-sessions/new`}>New Reading Session</Link>
         <Link to={`/books/${props.book && props.book.id}/edit`}>Edit Book</Link>
       </div>
     )
@@ -74,14 +73,15 @@ const Book = (props) => {
             <NoteList book={props.book} notes={props.notes}/>
           </div>
           <div id="bookcol2">
-            <h1>{props.book && props.book.attributes.title}</h1>
+            <h1 id="bookHeader">{props.book && props.book.attributes.title}</h1>
+            {renderLinks()}
             <p>By {props.book && props.book.attributes.author}</p>
             <p>Page Count: {props.book && props.book.attributes.page_count}</p>
             <p>{props.book && props.book.attributes.description}</p>
             {renderButtons()}
           </div>
           <div id="bookcol3">
-            {renderLinks()}
+            <ReadingSessionList readingSessions={props.readingSessions}/>
           </div>
 
         </>
