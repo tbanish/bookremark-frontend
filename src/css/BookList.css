@@ -50,6 +50,23 @@
   box-shadow: 10px 10px 8px #888888;
 }
 
+#emptyBookList {
+  padding-left: 350px;
+  width: 500px;
+  line-height: 30px;
+  color: #4c4c4c;
+}
+
+#emptyBookList a {
+  text-decoration: none;
+  color: #715838;
+  transition: 0.3s;
+}
+
+#emptyBookList a:hover {
+  color: #8ac4a1;
+}
+
 .bookCard a {
   color: white;
   letter-spacing: 2.5px;
