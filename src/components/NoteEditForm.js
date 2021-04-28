@@ -32,9 +32,9 @@ class NoteEditForm extends React.Component {
         <>
         <h1>Edit Note</h1>
         <form onSubmit={this.handleSubmit}>
-          <input onChange={this.handleChange} type="text" name="title" value={this.state.title} placeholder="title"/><br/><br/>
-          <textarea onChange={this.handleChange} type="text" name="content" value={this.state.content} rows={15} cols={60} placeholder="content"/><br/><br/>
-          <input type="submit" name="submit" value="edit note"/>
+          <input className="noteEditInputs" id="editNoteTitle" onChange={this.handleChange} type="text" name="title" value={this.state.title} placeholder="title"/><br/><br/>
+          <textarea className="noteEditInputs" id="editNoteContent" onChange={this.handleChange} type="text" name="content" value={this.state.content} rows={15} cols={75} placeholder="content"/><br/><br/>
+          <input id="editNotebtn" type="submit" name="submit" value="edit note"/>
         </form>
         </>
       )
