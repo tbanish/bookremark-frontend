@@ -1,6 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
 .GoalForm {
   text-align: center;
-  margin: 5%;
+  margin: 8%;
+}
+
+.GoalForm h1 {
+  color: #854370;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.5em;
+  margin-bottom: 1px;
+}
+
+.GoalForm p {
+  font-size: 1.3em;
+  color: #4c4c4c;
+}
+
+.GoalForm select {
+  font-size: 1em;
 }
 
 #goalbtn {
