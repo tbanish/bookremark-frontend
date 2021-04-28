@@ -38,14 +38,14 @@ class BookEditForm extends React.Component {
         <>
           <h1>Edit Book</h1>
           <form onSubmit={this.handleSubmit}>
-            <input onChange={this.handleChange}type="text" name="title" value={this.state.title} placeholder="title"/><br/><br/>
-            <input onChange={this.handleChange}type="text" name="author" value={this.state.author} placeholder="author"/><br/><br/>
+            <input className="bookEditInputs" id="editTitle" onChange={this.handleChange}type="text" name="title" value={this.state.title} placeholder="title"/>
+            <input className="bookEditInputs" id="editAuthor" onChange={this.handleChange}type="text" name="author" value={this.state.author} placeholder="author"/><br/><br/>
               <label>Page Count: </label>
               <select value={this.state.pageCount} name="pageCount" onChange={this.handleChange}>
                 {this.renderOptions()}
               </select><br/><br/>
-              <textarea onChange={this.handleChange} type="text" name="description" rows={20} cols={50}value={this.state.description} placeholder="add a book description (optional)"/><br/>
-            <input type="submit" value="edit book" />
+            <textarea className="bookEditInputs" id="editDescription" onChange={this.handleChange} type="text" name="description" rows={15} cols={75} value={this.state.description} placeholder="add a book description (optional)"/><br/>
+            <input id="bookEditbtn"type="submit" value="edit book" />
           </form>
         </>
       )
