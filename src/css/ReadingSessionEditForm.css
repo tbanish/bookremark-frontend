@@ -18,3 +18,18 @@
 .editFormContainer {
   font-size: 20px;
 }
+
+#editReadingSessiobtn {
+  font-family: 'Raleway', sans-serif;
+  background: #8ac4a1;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+#editReadingSessiobtn:hover {
+  color: #ffffff;
+  cursor: pointer;
+  background: #715838;
+}
