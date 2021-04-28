@@ -32,7 +32,7 @@ class BooksContainer extends React.Component {
                 deleteReadingSessions={this.props.deleteReadingSessions}
                 book={this.props.books.find(book => book.id === routerProps.match.params.id)}/>}/>
           <Route exact path="/books/:id/edit" render={routerProps => <BookEditForm {...routerProps} updateBook={this.props.updateBook} book={this.props.books.find(book => book.id === routerProps.match.params.id)}/>}/>
-          <Route exact path="/books/:id/notes/:id" render={routerProps => <Note {...routerProps} deleteNote={this.props.deleteNote} note={this.props.notes.find(note => note.id === parseInt(routerProps.match.params.id))}/>} />
+          <Route exact path="/books/:id/notes/:id" render={routerProps => <Note {...routerProps} book={this.props.books.find(book => book.id === routerProps.match.url.split("/")[2])} deleteNote={this.props.deleteNote} notes={this.props.notes.filter(note => note.bookId === routerProps.match.url.split("/")[2])} note={this.props.notes.find(note => note.id === parseInt(routerProps.match.params.id))}/>} />
           <Route exact path="/books/:id/notes/:id/edit" render={routerProps => <NoteEditForm {...routerProps} updateNote={this.props.updateNote} note={this.props.notes.find(note => note.id === parseInt(routerProps.match.params.id))}/>}/>
         </Switch>
       </div>
