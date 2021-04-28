@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
 .Book {
   min-height: 800px;
   display: grid;
@@ -5,7 +7,23 @@
 }
 
 .Book h1 {
-  text-align: center;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.1em;
+  background: #854370;
+  margin: 0;
+  padding: 12px;
+  color: #f0f3e8;
+}
+
+#bookcol3 {
+  text-align: left;
+}
+
+#bookcol2 p {
+  padding-left: 30px;
+  padding-right: 30px;
+  line-height: 25px;
 }
 
 #bookcol1,
@@ -19,13 +37,15 @@
 #bookcol1 li {
   list-style: none;
   text-align: left;
-  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 #bookcol1 a,
 #bookcol3 a {
   text-decoration: none;
   color: #854370;
+  transition: 0.3s;
 }
 
 #bookcol1 a:hover,
@@ -34,12 +54,32 @@
   cursor: pointer;
 }
 
-#bookcol2 {
-  font-size: 1em;
-  padding-left: 50px;
-  padding-right: 50px;
+#bookcol1 h3 {
+  color: #4c4c4c;
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 
-#bookcol3 {
-  text-align: left;
+#bookcol3 h3 {
+  color: #4c4c4c;
+}
+
+.bookButtons {
+  background: #8ac4a1;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px;
+  transition: 0.3s;
+}
+
+.bookButtons:hover {
+  cursor: pointer;
+  background: #715838;
+  color: #ffffff;
+}
+
+.bookButtonContainer {
+  padding-left: 20px;
 }
