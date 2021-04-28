@@ -106,6 +106,12 @@
   color: #8ac4a1;
 }
 
+.Note h2 {
+  font-size: 1.3em;
+  color: #808080;
+  text-align: center;
+}
+
 #notecol1 h3 {
   color: #ffffff;
   margin: 0;
