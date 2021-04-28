@@ -54,13 +54,13 @@
   text-decoration: overline solid #f0f3e8;
 }
 
-input {
+.BookNewForm input {
   padding: 5px;
   font-family: 'Raleway', sans-serif;
   margin: 10px;
 }
 
-textarea {
+.BookNewForm textarea {
   padding: 10px;
   font-family: 'Raleway', sans-serif;
 }
