@@ -1,4 +1,21 @@
 .NoteEditForm {
-  margin: 5%;
   text-align: center;
+}
+
+.NoteEditForm h1 {
+  font-size: 3em;
+  color: #854370;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 15px;
+}
+
+.noteEditInputs {
+  margin: 5px;
+  font-family: 'Raleway', sans-serif;
+}
+
+#editNoteContent {
+  padding: 20px;
+  font-size: 1em;
+  line-height: 22px;
 }
