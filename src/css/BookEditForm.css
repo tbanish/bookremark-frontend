@@ -1,4 +1,21 @@
 .BookEditForm {
   text-align: center;
-  margin: 5%;
+}
+
+.BookEditForm h1 {
+  font-size: 3em;
+  color: #854370;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 15px;
+}
+
+.bookEditInputs {
+  margin: 5px;
+  font-family: 'Raleway', sans-serif;
+}
+
+#editDescription {
+  padding: 20px;
+  font-size: 1em;
+  line-height: 22px;
 }
