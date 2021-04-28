@@ -33,6 +33,7 @@
   letter-spacing: 2.5px;
   font-family: 'Orelega One', cursive;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .BookShelf h1 {
