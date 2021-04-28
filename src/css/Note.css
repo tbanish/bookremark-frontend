@@ -1,14 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Raleway&display=swap');
 
-#notecol1 h3 {
-  color: #ffffff;
-  margin: 0;
-  padding-top: 20px;
-  padding-bottom: 10px;
-  font-size: 1.7em;
-}
-
 .Note h1 {
   text-align: left;
   background: #854370;
@@ -114,10 +106,12 @@
   color: #8ac4a1;
 }
 
-.Note h2 {
-  font-size: 1.3em;
-  color: #808080;
-  text-align: center;
+#notecol1 h3 {
+  color: #ffffff;
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-size: 1.7em;
 }
 
 #notecol3 h3 {
