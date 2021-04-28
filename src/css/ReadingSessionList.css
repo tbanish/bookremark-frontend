@@ -2,3 +2,9 @@
   margin: 5%;
   text-align: center;
 }
+
+.ReadingSessionList li {
+  list-style: none;
+  text-align: left;
+  padding: 5px 0 10px 2px;
+}
