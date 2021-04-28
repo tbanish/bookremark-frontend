@@ -1,4 +1,20 @@
 .ReadingSessionEditForm {
   text-align: center;
-  margin: 5%;
+}
+
+.ReadingSessionEditForm h1 {
+  font-size: 3em;
+  color: #854370;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 30px;
+  margin-top: 75px;
+}
+
+#editReadingSessionTitle {
+  padding: 5px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.editFormContainer {
+  font-size: 20px;
 }
