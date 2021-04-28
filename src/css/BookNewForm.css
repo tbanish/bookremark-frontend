@@ -80,6 +80,7 @@ textarea {
   padding-right: 50px;
   margin-top: 0;
   padding-top: 15px;
+  color: #4c4c4c;
 }
 
 #newBookFormMessage {
@@ -89,4 +90,5 @@ textarea {
   padding-left: 75px;
   line-height: 30px;
   font-size: 18px;
+  color: #4c4c4c;
 }
