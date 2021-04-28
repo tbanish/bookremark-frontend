@@ -56,9 +56,12 @@ const Book = (props) => {
       )
     } else {
       return(
-        <div>
-          <input onClick={() => handleClick()} type="button" value="delete" />
+        <>
+        <p id="finishMark">Finished!</p>
+        <div className="bookButtonContainer">
+          <input className="bookButtons" onClick={() => handleClick()} type="button" value="delete" />
         </div>
+        </>
       )
     }
   }
