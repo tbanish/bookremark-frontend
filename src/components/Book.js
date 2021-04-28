@@ -49,9 +49,9 @@ const Book = (props) => {
   const renderButtons = () => {
     if (props.book && props.book.attributes.finished !== true) {
       return(
-        <div>
-          <input onClick={() => handleClick()} type="button" value="delete" />
-          <input onClick={() => handleFinish()} type="button" value="finish" />
+        <div className="bookButtonContainer">
+          <input className="bookButtons" onClick={() => handleClick()} type="button" value="delete" />
+          <input className="bookButtons" onClick={() => handleFinish()} type="button" value="finish" />
         </div>
       )
     } else {
