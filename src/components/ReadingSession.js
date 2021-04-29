@@ -5,12 +5,16 @@ import '../css/ReadingSession.css'
 const ReadingSession = (props) => {
   const renderLinks = () => {
     return(
-      <div>
+      <div className="readingSessionNav">
+        <div className="sessionMainNav">
         <Link to={`/books/${props.readingSession.book_id}/reading-sessions/new`}>New</Link>
         <Link to={`/books/${props.readingSession.book_id}/reading-sessions/${props.readingSession && props.readingSession.id}/edit`}>Edit</Link>
         <Link to={`/books/${props.readingSession.book_id}`}>Book Page</Link><br/><br/>
-        <Link to={`/books/${props.readingSession.book_id}/reading-sessions/${nextReadingSession()}`}>Next Session</Link><br/><br/>
-        <Link to={`/books/${props.readingSession.book_id}/reading-sessions/${previousReadingSession()}`}>Last Session</Link>
+        </div>
+        <div className="sessionCycle">
+          <Link id="previousReadingSession" to={`/books/${props.readingSession.book_id}/reading-sessions/${previousReadingSession()}`}>Last Session</Link>
+          <Link id="nextReadingSession" to={`/books/${props.readingSession.book_id}/reading-sessions/${nextReadingSession()}`}>Next Session</Link>
+        </div>
       </div>
     )
   }
@@ -57,7 +61,7 @@ const ReadingSession = (props) => {
       <div className="readingSessionNote" key={note.id}>
         <h2>{note.title}</h2>
         <p>{note.content}</p>
-        <input onClick={(event) => handleDeleteNote(event)} id={note.id} type="button" value="delete note"/>
+        <input className="sessionDeletebtn" onClick={(event) => handleDeleteNote(event)} id={note.id} type="button" value="delete note"/>
       </div>
     )
   }
@@ -69,11 +73,13 @@ const ReadingSession = (props) => {
         <>
           <div id="readingSessioncol1">
             <h1>{book.attributes.title}</h1>
-            <h2>{props.readingSession && props.readingSession.title}</h2>
+            <div className="sessionStats">
+              <h2>{props.readingSession && props.readingSession.title}</h2>
+              <p id="readingSessionDate">Date: {props.readingSession && props.readingSession.date}</p>
+              <p id="readingSessionDuration">Duration: {props.readingSession && props.readingSession.duration} minutes</p>
+            </div>
+            <input className="sessionDeletebtn" onClick={() => handleClick()} type="button" value="delete"/><br/>
             {renderLinks()}
-          <p id="readingSessionDate">Date: {props.readingSession && props.readingSession.date}</p>
-            <p id="readingSessionDuration">Duration: {props.readingSession && props.readingSession.duration} minutes</p>
-            <input onClick={() => handleClick()} type="button" value="delete"/><br/>
           </div>
           <div id="readingSessioncol2">
             {renderNotes()}
