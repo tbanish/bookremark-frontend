@@ -40,3 +40,15 @@ input, textarea {
   font-family: 'Amatic SC', cursive;
   font-size: 1.5em;
 }
+
+#timerQuotecol2 {
+  opacity: 70%;
+  font-size: 1.9em;
+  padding: 8px;
+  text-align: center;
+  color: #854370;
+}
+
+#timerQuotecol1 {
+  padding-bottom: 0;
+}
