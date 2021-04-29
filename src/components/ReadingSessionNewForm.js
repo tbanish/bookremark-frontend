@@ -103,12 +103,12 @@ class ReadingSessionNewForm extends React.Component {
           <form id="noteForm" onSubmit={this.handleNoteSubmit} onKeyDown={this.handleKeyDown} ><br/><br/>
             <input onChange={this.handleChange} type="text" name="noteTitle" value={this.state.noteTitle} placeholder="give your note a title"/><br/><br/>
             <textarea onChange={this.handleChange} type="text" name="noteContent" rows={15} cols={60} value={this.state.noteContent} placeholder="add some notes here ..."/><br/><br/>
-            <input type="submit" value="add note"/>
+            <input id="addNotebtn" type="submit" value="add note"/>
           </form>
         </div>
 
         <div id="newReadingSessioncol2">
-          <h3>Session Notes</h3>
+          <h3>Session Notes:</h3>
           {this.renderNotes()}
       </div>
       </div>
