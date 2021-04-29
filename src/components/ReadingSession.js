@@ -12,8 +12,8 @@ const ReadingSession = (props) => {
         <Link to={`/books/${props.readingSession.book_id}`}>Book Page</Link><br/><br/>
         </div>
         <div className="sessionCycle">
-          <Link id="previousReadingSession" to={`/books/${props.readingSession.book_id}/reading-sessions/${previousReadingSession()}`}>Last Session</Link>
-          <Link id="nextReadingSession" to={`/books/${props.readingSession.book_id}/reading-sessions/${nextReadingSession()}`}>Next Session</Link>
+          <Link id="previousReadingSession" to={`/books/${props.readingSession.book_id}/reading-sessions/${previousReadingSession()}`}>Prev</Link>
+          <Link id="nextReadingSession" to={`/books/${props.readingSession.book_id}/reading-sessions/${nextReadingSession()}`}>Next</Link>
         </div>
       </div>
     )
