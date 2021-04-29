@@ -27,3 +27,19 @@
   cursor: pointer;
   margin: 0 10px 10px 10px;
 }
+
+.timerBtnContainer {
+  text-align: center;
+}
+
+#start {
+  padding: 7px 9px 7px 9px;
+}
+
+#stop {
+  padding: 7px 9px 7px 9px;
+}
+
+#reset {
+  padding: 9.5px;
+}
