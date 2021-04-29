@@ -1,4 +1,6 @@
 import React from 'react'
+import '../css/Timer.css'
+import { BsFillPlayFill, BsFillStopFill } from "react-icons/bs";
 
 class Timer extends React.Component {
   state = {
@@ -44,11 +46,13 @@ class Timer extends React.Component {
 
   render() {
     return(
-      <div>
-        <p>{this.state.minutes} minutes {this.state.seconds} seconds</p>
-        <input onClick={() => this.startTimer()} type="button" value="start"/>
-        <input onClick={() => this.stopTimer()}type="button" value="stop"/>
-        <input onClick={() => this.resetTimer()}type="button" value="reset"/>
+      <div className="Timer">
+        <p>{this.state.minutes} m {this.state.seconds} s</p>
+        <div className="timerBtnContainer">
+        <button className="timerbtn" id="start" onClick={() => this.startTimer()} type="button"><BsFillPlayFill /></button>
+        <button className="timerbtn" id="stop" onClick={() => this.stopTimer()}type="button"><BsFillStopFill/></button>
+        <input className="timerbtn" id="reset" onClick={() => this.resetTimer()}type="button" value="reset"/>
+        </div>
       </div>
     )
   }
