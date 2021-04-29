@@ -1,5 +1,4 @@
 import React from 'react'
-import ReadingSessionList from '../components/ReadingSessionList'
 import ReadingSession from '../components/ReadingSession'
 import ReadingSessionNewForm from '../components/ReadingSessionNewForm'
 import ReadingSessionEditForm from '../components/ReadingSessionEditForm'
