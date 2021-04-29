@@ -13,7 +13,15 @@ class ReadingSessionContainer extends React.Component {
       <div>
         <Switch>
           <Route exact path={`/books/:id/reading-sessions/new`} render={routerProps => <ReadingSessionNewForm addReadingSession={this.props.addReadingSession} date={this.props.date} {...routerProps} />}/>
-          <Route exact path={`/books/:id/reading-sessions/:id`} render={routerProps => <ReadingSession {...routerProps} deleteNote={this.props.deleteNote} deleteNotes={this.props.deleteNotes} notes={this.props.notes.filter(note => note.readingSessionId === parseInt(routerProps.match.params.id))} deleteReadingSession={this.props.deleteReadingSession} readingSession={this.props.readingSessions.find(readingSession => readingSession.id === parseInt(routerProps.match.params.id))}/>}/>
+          <Route exact path={`/books/:id/reading-sessions/:id`} render={routerProps =>
+              <ReadingSession {...routerProps}
+                deleteNote={this.props.deleteNote}
+                deleteNotes={this.props.deleteNotes}
+                books={this.props.books}
+                notes={this.props.notes.filter(note => note.readingSessionId === parseInt(routerProps.match.params.id))}
+                deleteReadingSession={this.props.deleteReadingSession}
+                readingSessions={this.props.readingSessions.filter(readingSession => readingSession.book_id === parseInt(routerProps.match.url.split('/')[2]))}
+                readingSession={this.props.readingSessions.find(readingSession => readingSession.id === parseInt(routerProps.match.params.id))}/>}/>
           <Route exact path={`/books/:id/reading-sessions/:id/edit`} render={routerProps => <ReadingSessionEditForm {...routerProps} updateReadingSession={this.props.updateReadingSession} readingSession={this.props.readingSessions.find(readingSession => readingSession.id === parseInt(routerProps.match.params.id))}/>}/>
         </Switch>
       </div>
