@@ -6,10 +6,39 @@ const ReadingSession = (props) => {
   const renderLinks = () => {
     return(
       <div>
-        <Link to={`/books/${props.match.params.id}/reading-sessions/new`}>New Reading Session</Link><br/>
-        <Link to={`/books/${props.readingSession && props.readingSession.book_id}/reading-sessions/${props.readingSession && props.readingSession.id}/edit`}>Edit Reading Session</Link>
+        <Link to={`/books/${props.readingSession.book_id}/reading-sessions/new`}>New</Link>
+        <Link to={`/books/${props.readingSession.book_id}/reading-sessions/${props.readingSession && props.readingSession.id}/edit`}>Edit</Link>
+        <Link to={`/books/${props.readingSession.book_id}`}>Book Page</Link><br/><br/>
+        <Link to={`/books/${props.readingSession.book_id}/reading-sessions/${nextReadingSession()}`}>Next Session</Link><br/><br/>
+        <Link to={`/books/${props.readingSession.book_id}/reading-sessions/${previousReadingSession()}`}>Last Session</Link>
       </div>
     )
+  }
+
+  const nextReadingSession = () => {
+    const first = props.readingSessions[0]
+    const current = props.readingSessions.indexOf(props.readingSession)
+    const nextInd = current + 1
+    const next = props.readingSessions[nextInd]
+
+    if (nextInd > props.readingSessions.length-1) {
+      return first.id
+    } else {
+      return next.id
+    }
+  }
+
+  const previousReadingSession = () => {
+    const lastSession = props.readingSessions[props.readingSessions.length - 1]
+    const current = props.readingSessions.indexOf(props.readingSession)
+    const previousInd = current - 1
+    const previous = props.readingSessions[previousInd]
+
+    if (previousInd < 0) {
+      return lastSession.id
+    } else {
+      return previous.id
+    }
   }
 
   const handleClick = () => {
@@ -35,9 +64,11 @@ const ReadingSession = (props) => {
 
   const renderReadingSessionContent = () => {
     if (props.readingSession !== undefined) {
+      const book = props.books.find(book => parseInt(book.id) === props.readingSession.book_id)
       return (
         <>
           <div id="readingSessioncol1">
+            <h1>{book.attributes.title}</h1>
             <h2>{props.readingSession && props.readingSession.title}</h2>
             {renderLinks()}
           <p id="readingSessionDate">Date: {props.readingSession && props.readingSession.date}</p>
