@@ -10,12 +10,18 @@
   padding: 10%;
 }
 
-#readingSessioncol1 a {
-  text-decoration: none;
-  color: #715838;
+.readingSessionNav {
+  margin-top: 50px;
 }
 
-#readingSessioncol1 a:hover {
+.sessionMainNav a {
+  padding-right: 25px;
+  text-decoration: none;
+  color: #715838;
+  transition: 0.3s;
+}
+
+.sessionMainNav a:hover {
   color: #8ac4a1;
 }
 
@@ -26,16 +32,5 @@
   text-align: left;
   padding-left: 20px;
   background-color: #5d2e4e;
-  border-radius: 1px;
-}
-
-.readingSessionNote {
-  margin: 30px;
-  background-color: #ffffff;
-  padding: 15px;
-  border-radius: 10px;
-}
-
-#readingSessionDate {
-  font-size: 1.5em;
+  border-radius: 2px;
 }
