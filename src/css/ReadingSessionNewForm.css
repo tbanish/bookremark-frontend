@@ -113,3 +113,32 @@ input, textarea {
 #sessionTitle {
   padding: 5px;
 }
+
+#endSession {
+  background-color: #8ac4a1;
+  border: none;
+  border-radius: 4px;
+  margin-right: 5px;
+  margin-left: 10px;
+  padding: 6px 10px 6px 10px;
+  text-decoration: none;
+  color: #000000;
+  font-size: 12px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+#endSession:hover {
+  background-color: #715838;
+  color: #ffffff;
+}
+
+.ReadingSessionNewForm textarea {
+  padding: 10px;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+#noteForm {
+  padding-top: 0;
+}
