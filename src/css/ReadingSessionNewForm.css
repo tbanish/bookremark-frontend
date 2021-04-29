@@ -29,6 +29,7 @@
 
 input, textarea {
   outline: none;
+  font-family: 'Raleway', sans-serif;
 }
 
 .timerQuoteGrid {
@@ -73,7 +74,7 @@ input, textarea {
   padding: 6px 10px 6px 10px;
   text-decoration: none;
   color: #000000;
-  font-size: 14px;
+  font-size: 10px;
   transition: 0.3s;
   cursor: pointer;
 }
@@ -88,10 +89,10 @@ input, textarea {
   border: none;
   border-radius: 4px;
   margin-right: 5px;
-  padding: 6px 10px 6px 10px;
+  padding: 3px 10px 3px 10px;
   text-decoration: none;
   color: #000000;
-  font-size: 14px;
+  font-size: 18px;
   transition: 0.3s;
   cursor: pointer;
 }
