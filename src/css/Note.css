@@ -75,7 +75,7 @@
   display: flex;
   justify-content: center;
   padding-top: 20%;
-  background-color: #a99a87;
+  background-color: #d8dad0;
   height: 100%;
 }
 
@@ -113,7 +113,7 @@
 }
 
 #notecol1 h3 {
-  color: #ffffff;
+  color: #854370;
   margin: 0;
   padding-top: 20px;
   padding-bottom: 10px;
@@ -121,6 +121,6 @@
 }
 
 #notecol3 h3 {
-  color: #ffffff;
+  color: #854370;
   font-size: 1.3em;
 }
