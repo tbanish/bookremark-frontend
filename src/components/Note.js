@@ -15,7 +15,7 @@ const Note = (props) => {
       <div className="bookNavLinks">
         <Link to={`/books/${props.book && props.book.id}/reading-sessions/new`}>New Reading Session</Link>
         <Link to={`/books/${props.book && props.book.id}/edit`}>Edit Book</Link>
-        <Link to={`/books/${props.book && props.book.id}`}>Book Page</Link>
+        <Link to={`/books/${props.book && props.book.id}`}>Book Details</Link>
       </div>
     )
   }
