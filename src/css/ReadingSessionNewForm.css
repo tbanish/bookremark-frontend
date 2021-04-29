@@ -30,8 +30,10 @@
 .sessionNotes {
   margin: 30px;
   background-color: #fcfcfa;
-  padding: 15px;
   border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
   border: 10px solid #b8dbc6;
   box-shadow: 0 0 0 7px #999999;
   border-width: 5px;
