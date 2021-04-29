@@ -33,7 +33,7 @@ class ReadingSessionNewForm extends React.Component {
         notes: this.state.notes
       }
       this.props.addReadingSession(readingSession)
-      this.props.history.push(`/books/${this.props.match.params.id}/reading-sessions`)
+      this.props.history.push(`/books/${this.props.match.params.id}`)
     }
   }
 
