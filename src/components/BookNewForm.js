@@ -55,7 +55,9 @@ class BookNewForm extends React.Component {
 
         <div className="bookFormBodyContainer">
           <div id="newBookFormMessage">
-              <p>Proin facilisis vestibulum dignissim. Duis iaculis, magna sit amet aliquet pretium, nibh sapien laoreet lorem, et congue leo dui vitae augue. Nunc rutrum ante massa, eu interdum urna placerat id. Aliquam ultricies elit urna. Maecenas vel felis neque. Morbi porta, ex in venenatis pretium, libero arcu porttitor ex, nec congue metus sapien ut diam.</p>
+              <p>It's time to grow your library.</p>
+              <p>Fill out the form to start adding books to your reading list.  Every book you add must have a title and an author.  Optionally, you can add a book description and page count.</p>
+              <p>If you don't want to add a description and page count now, not to worry.  You can always update and edit your book details later.</p>
           </div>
           <form className="bookForm" onSubmit={this.handleSubmit}>
             <span className="requiredField">*</span><input onChange={this.handleChange}type="text" name="title" value={this.state.title} placeholder="title"/>
