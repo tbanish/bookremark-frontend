@@ -17,3 +17,13 @@
   background: #e5e5e5;
   text-align: center;
 }
+
+.timerbtn {
+  border: 1px solid #a0b0c1;
+  border-radius: 50px;
+  background-color: #273a4e;
+  color: #ffffff;
+  transition: 0.3s;
+  cursor: pointer;
+  margin: 0 10px 10px 10px;
+}
