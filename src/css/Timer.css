@@ -43,3 +43,12 @@
 #reset {
   padding: 9.5px;
 }
+
+.timerbtn:hover {
+  background: #ffffff;
+  color: #273a4e;
+}
+
+.timerbtn:active {
+  background: #854370;
+}
