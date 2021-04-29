@@ -48,7 +48,7 @@ const ReadingSession = (props) => {
   const handleClick = () => {
     props.deleteReadingSession(props.readingSession)
     props.deleteNotes(props.readingSession.id)
-    props.history.push(`/books/${props.readingSession.book_id}/reading-sessions`)
+    props.history.push(`/books/${props.readingSession.book_id}`)
   }
 
   const handleDeleteNote = (event) => {
