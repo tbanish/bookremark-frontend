@@ -95,3 +95,21 @@ input, textarea {
   transition: 0.3s;
   cursor: pointer;
 }
+
+#addNotebtn:hover {
+  background-color: #715838;
+  color: #ffffff;
+}
+
+#addNotebtn:active {
+  background-color: #000000;
+}
+
+#noteTitle {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+#sessionTitle {
+  padding: 5px;
+}
