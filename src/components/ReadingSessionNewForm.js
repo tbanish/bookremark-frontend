@@ -89,21 +89,37 @@ class ReadingSessionNewForm extends React.Component {
     }
   }
 
+  renderQuote = () => {
+    return (
+      <div className="newSessionQuote" id="timerQuotecol2">
+        <p>"Reading is an active, imaginative act; it takes work." — Khaled Hosseini</p>
+      </div>
+    )
+  }
+
   render() {
     return(
       <div className="ReadingSessionNewForm">
         <div id="newReadingSessioncol1">
           <h1>New Reading Session</h1>
+          <h3>{this.props.book && this.props.book.attributes.title}</h3>
           <TodaysDate />
-          <form id="readingSessionForm" onSubmit={this.handleSubmit}>
-            <input onChange={this.handleChange} type="text" name="title" value={this.state.title} placeholder="title"/><br/><br/>
-            <Timer setDuration={this.setDuration}/><br/>
-            <input type="submit" value="end session"/>
-          </form>
+
+          <div className="timerQuoteGrid">
+            <div id="timerQuotecol1">
+              <Timer setDuration={this.setDuration}/><br/>
+              <form id="readingSessionForm" onSubmit={this.handleSubmit}>
+                <input id="sessionTitle" onChange={this.handleChange} type="text" name="title" value={this.state.title} placeholder="session title"/>
+                <input id="endSession" type="submit" value="end session"/>
+              </form>
+            </div>
+            {this.renderQuote()}
+          </div>
           <form id="noteForm" onSubmit={this.handleNoteSubmit} onKeyDown={this.handleKeyDown} ><br/><br/>
-            <input onChange={this.handleChange} type="text" name="noteTitle" value={this.state.noteTitle} placeholder="give your note a title"/><br/><br/>
-            <textarea onChange={this.handleChange} type="text" name="noteContent" rows={15} cols={60} value={this.state.noteContent} placeholder="add some notes here ..."/><br/><br/>
-            <input id="addNotebtn" type="submit" value="add note"/>
+            <input id="noteTitle" onChange={this.handleChange} type="text" name="noteTitle" value={this.state.noteTitle} placeholder="note title"/>
+            <input id="addNotebtn" type="submit" value="+"/><br/><br/>
+            <textarea onChange={this.handleChange} type="text" name="noteContent" rows={10} cols={70} value={this.state.noteContent}
+              placeholder="When you're ready to begin click the play button on the timer to start your session. During your session you can add as many notes as you like.  Simply type your notes into this text area and click the '+' button to submit them. When you are through with your session click the stop button on the timer, give your session a title and click the 'end session' button to submit your work."/>
           </form>
         </div>
 
