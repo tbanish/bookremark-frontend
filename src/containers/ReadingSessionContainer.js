@@ -12,7 +12,7 @@ class ReadingSessionContainer extends React.Component {
     return(
       <div>
         <Switch>
-          <Route exact path={`/books/:id/reading-sessions/new`} render={routerProps => <ReadingSessionNewForm addReadingSession={this.props.addReadingSession} date={this.props.date} {...routerProps} />}/>
+          <Route exact path={`/books/:id/reading-sessions/new`} render={routerProps => <ReadingSessionNewForm book={this.props.books.find(book => book.id === routerProps.match.params.id)} addReadingSession={this.props.addReadingSession} date={this.props.date} {...routerProps} />}/>
           <Route exact path={`/books/:id/reading-sessions/:id`} render={routerProps =>
               <ReadingSession {...routerProps}
                 deleteNote={this.props.deleteNote}
