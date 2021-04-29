@@ -88,3 +88,31 @@
   background-color: #5d2e4e;
   border-radius: 2px;
 }
+
+#previousReadingSession {
+  background-color: #8ac4a1;
+  border: none;
+  border-radius: 4px;
+  margin-right: 5px;
+  padding: 10px;
+  text-decoration: none;
+  color: #715838;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+#previousReadingSession:hover {
+  color: #ffffff;
+  background-color: #715838;
+}
+
+.readingSessionNote {
+  margin: 30px;
+  background-color: #fcfcfa;
+  padding: 15px;
+  border-radius: 10px;
+  border: 10px solid #b8dbc6;
+  box-shadow: 0 0 0 7px #7f684b;
+  border-width: 5px;
+  line-height: 28px;
+}
