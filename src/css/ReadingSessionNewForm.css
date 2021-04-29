@@ -77,3 +77,21 @@ input, textarea {
   transition: 0.3s;
   cursor: pointer;
 }
+
+.sessionNotes input:hover {
+  background-color: #715838;
+  color: #ffffff;
+}
+
+#addNotebtn {
+  background-color: #8ac4a1;
+  border: none;
+  border-radius: 4px;
+  margin-right: 5px;
+  padding: 6px 10px 6px 10px;
+  text-decoration: none;
+  color: #000000;
+  font-size: 14px;
+  transition: 0.3s;
+  cursor: pointer;
+}
