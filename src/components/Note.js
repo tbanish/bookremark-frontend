@@ -7,15 +7,15 @@ import '../css/Note.css'
 const Note = (props) => {
 
   const renderLinks = () => {
-    return <Link to={`/books/${props.note && props.note.bookId}/notes/${props.note && props.note.id}/edit`}>edit</Link>
+    return <Link to={`/books/${props.note.bookId}/notes/${props.note.id}/edit`}>edit</Link>
   }
 
   const renderNoteNavLinks = () => {
     return (
       <div className="bookNavLinks">
-        <Link to={`/books/${props.book && props.book.id}/reading-sessions/new`}>New Reading Session</Link>
-        <Link to={`/books/${props.book && props.book.id}/edit`}>Edit Book</Link>
-        <Link to={`/books/${props.book && props.book.id}`}>Book Details</Link>
+        <Link to={`/books/${props.book.id}/reading-sessions/new`}>New Reading Session</Link>
+        <Link to={`/books/${props.book.id}/edit`}>Edit Book</Link>
+        <Link to={`/books/${props.book.id}`}>Book Details</Link>
       </div>
     )
   }
@@ -33,10 +33,10 @@ const Note = (props) => {
           <NoteList book={props.book} notes={props.notes}/>
         </div>
         <div id="notecol2">
-          <h1>{props.book && props.book.attributes.title}</h1>
+          <h1>{props.book.attributes.title}</h1>
           {renderNoteNavLinks()}
-          <h2>{props.note && props.note.title}</h2>
-          <p>{props.note && props.note.content}</p><br/>
+          <h2>{props.note.title}</h2>
+          <p>{props.note.content}</p><br/>
           <div className="noteDeleteEdit">
             <input onClick={() => handleClick()} type="button" value="delete"/>
             {renderLinks()}
