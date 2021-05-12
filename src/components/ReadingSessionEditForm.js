@@ -18,15 +18,20 @@ class ReadingSessionEditForm extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-    const readingSession = {
-      title: this.state.title,
-      date: this.state.date,
-      duration: this.state.duration,
-      book_id: this.props.readingSession.book_id,
-    }
 
-    this.props.updateReadingSession(readingSession, this.props.readingSession.id)
-    this.props.history.push(`/books/${readingSession.book_id}/reading-sessions/${this.props.readingSession.id}`)
+    if (this.state.title === '') {
+      alert('Make sure to give your reading session a title.')
+    } else {
+      const readingSession = {
+        title: this.state.title,
+        date: this.state.date,
+        duration: this.state.duration,
+        book_id: this.props.readingSession.book_id,
+      }
+
+      this.props.updateReadingSession(readingSession, this.props.readingSession.id)
+      this.props.history.push(`/books/${readingSession.book_id}/reading-sessions/${this.props.readingSession.id}`)
+    }
   }
 
   renderContent = () => {
