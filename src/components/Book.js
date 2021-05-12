@@ -8,8 +8,8 @@ const Book = (props) => {
   const renderLinks = () => {
     return (
       <div className="bookNavLinks">
-        <Link to={`/books/${props.book && props.book.id}/reading-sessions/new`}>New Reading Session</Link>
-        <Link to={`/books/${props.book && props.book.id}/edit`}>Edit Book</Link>
+        <Link to={`/books/${props.book.id}/reading-sessions/new`}>New Reading Session</Link>
+        <Link to={`/books/${props.book.id}/edit`}>Edit Book</Link>
       </div>
     )
   }
@@ -46,7 +46,7 @@ const Book = (props) => {
   }
 
   const renderButtons = () => {
-    if (props.book && props.book.attributes.finished !== true) {
+    if (props.book.attributes.finished !== true) {
       return(
         <div className="bookButtonContainer">
           <input className="bookButtons" onClick={() => handleClick()} type="button" value="delete" />
@@ -73,11 +73,11 @@ const Book = (props) => {
             <NoteList book={props.book} notes={props.notes}/>
           </div>
           <div id="bookcol2">
-            <h1 id="bookHeader">{props.book && props.book.attributes.title}</h1>
+            <h1 id="bookHeader">{props.book.attributes.title}</h1>
             {renderLinks()}
-            <p>By {props.book && props.book.attributes.author}</p>
-            <p>Page Count: {props.book && props.book.attributes.page_count}</p>
-            <p>{props.book && props.book.attributes.description}</p>
+            <p>By {props.book.attributes.author}</p>
+            <p>Page Count: {props.book.attributes.page_count}</p>
+            <p>{props.book.attributes.description}</p>
             {renderButtons()}
           </div>
           <div id="bookcol3">
