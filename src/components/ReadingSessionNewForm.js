@@ -24,7 +24,6 @@ class ReadingSessionNewForm extends React.Component {
     event.preventDefault()
     if (this.state.duration === '') {
       alert('Stop the timer before submitting your session.')
-
     } else if (this.state.title === '') {
       alert('Make sure to give your reading session a title.')
     } else {
