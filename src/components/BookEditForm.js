@@ -18,9 +18,14 @@ class BookEditForm extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-    const bookId = this.props.book.id
-    this.props.updateBook(this.state, bookId)
-    this.props.history.push(`/books/${this.props.match.params.id}`)
+
+    if (this.state.title === '' || this.state.author === '') {
+      alert('Make sure to give your book a title and author.')
+    } else {
+      const bookId = this.props.book.id
+      this.props.updateBook(this.state, bookId)
+      this.props.history.push(`/books/${this.props.match.params.id}`)
+    }
   }
 
   renderOptions = () => {
