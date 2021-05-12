@@ -1,7 +1,7 @@
 import React from 'react'
 import '../css/GoalForm.css'
 
-class GoalNewForm extends React.Component {
+class GoalForm extends React.Component {
   state = {
     goal: this.props.goals.length > 0 ? this.props.goals[0].attributes.total : '1'
   }
@@ -48,4 +48,4 @@ class GoalNewForm extends React.Component {
   }
 }
 
-export default GoalNewForm
+export default GoalForm
