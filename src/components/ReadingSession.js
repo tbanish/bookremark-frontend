@@ -8,7 +8,7 @@ const ReadingSession = (props) => {
       <div className="readingSessionNav">
         <div className="sessionMainNav">
         <Link to={`/books/${props.readingSession.book_id}/reading-sessions/new`}>New</Link>
-        <Link to={`/books/${props.readingSession.book_id}/reading-sessions/${props.readingSession && props.readingSession.id}/edit`}>Edit</Link>
+        <Link to={`/books/${props.readingSession.book_id}/reading-sessions/${props.readingSession.id}/edit`}>Edit</Link>
         <Link to={`/books/${props.readingSession.book_id}`}>Book Page</Link><br/><br/>
         </div>
         <div className="sessionCycle">
@@ -74,9 +74,9 @@ const ReadingSession = (props) => {
           <div id="readingSessioncol1">
             <h1>{book.attributes.title}</h1>
             <div className="sessionStats">
-              <h2>{props.readingSession && props.readingSession.title}</h2>
-              <p id="readingSessionDate">Date: {props.readingSession && props.readingSession.date}</p>
-              <p id="readingSessionDuration">Duration: {props.readingSession && props.readingSession.duration} minutes</p>
+              <h2>{props.readingSession.title}</h2>
+              <p id="readingSessionDate">Date: {props.readingSession.date}</p>
+              <p id="readingSessionDuration">Duration: {props.readingSession.duration} minutes</p>
             </div>
             <input className="sessionDeletebtn" onClick={() => handleClick()} type="button" value="delete"/><br/>
             {renderLinks()}
