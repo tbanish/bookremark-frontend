@@ -16,14 +16,19 @@ class NoteEditForm extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-    const updatedNote = {
-      title: this.state.title,
-      content: this.state.content,
-      id: this.props.note.id,
-    }
 
-    this.props.updateNote(updatedNote, this.props.note.bookId)
-    this.props.history.push(`/books/${this.props.note.bookId}/notes/${this.props.note.id}`)
+    if (this.state.title === '' || this.state.content === '') {
+      alert('Make sure to give your note a title and content.')
+    } else {
+      const updatedNote = {
+        title: this.state.title,
+        content: this.state.content,
+        id: this.props.note.id,
+      }
+
+      this.props.updateNote(updatedNote, this.props.note.bookId)
+      this.props.history.push(`/books/${this.props.note.bookId}/notes/${this.props.note.id}`)
+    }
   }
 
   renderContent = () => {
