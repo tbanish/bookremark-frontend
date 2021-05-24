@@ -14,6 +14,16 @@ const BookList = (props) => {
 
   const renderBooks = () => {
     const books = props.books.filter(book => book.attributes.finished !== true)
+    const filteredBooks = props.books.filter(book => book.attributes.title.toLowerCase().includes(props.searchInput))
+
+    if (filteredBooks.length > 0) {
+      return filteredBooks.map(book =>
+        <div key={book.id} style={divColor()} className="bookCard">
+          <Link className="bookLink" to={`/books/${book.id}`}>{book.attributes.title}</Link>
+          <p>{book.attributes.author}</p>
+        </div>
+      )
+    }
     if (books.length > 0) {
       return books.map(book =>
         <div key={book.id} style={divColor()} className="bookCard">
@@ -46,6 +56,9 @@ const BookList = (props) => {
         <h1>Reading List</h1>
         {renderQuote()}
       </div>
+      <form>
+        <input onChange={props.handleChange} type="text" value={props.searchInput} placeholder="search titles in list"/>
+      </form>
       <div className="bookListGrid">
         {renderBooks()}
       </div>
