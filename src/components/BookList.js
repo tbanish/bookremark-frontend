@@ -14,7 +14,7 @@ const BookList = (props) => {
 
   const renderBooks = () => {
     const books = props.books.filter(book => book.attributes.finished !== true)
-    const filteredBooks = props.books.filter(book => book.attributes.title.toLowerCase().includes(props.searchInput))
+    const filteredBooks = books.filter(book => book.attributes.title.toLowerCase().includes(props.searchInput))
 
     if (filteredBooks.length > 0) {
       return filteredBooks.map(book =>
