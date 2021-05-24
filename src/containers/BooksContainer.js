@@ -14,11 +14,25 @@ import { updateNote, deleteNote, deleteNotes } from '../actions/notes.js'
 
 
 class BooksContainer extends React.Component {
+  state = {
+    searchInput: ''
+  }
+
+  handleChange = (event) => {
+    this.setState({
+      searchInput: event.target.value
+    })
+  }
+
   render() {
     return(
       <div>
         <Switch>
-          <Route exact path="/books/reading-list" render={routerProps => <BookList {...routerProps} books={this.props.books}/>}/>
+          <Route exact path="/books/reading-list" render={routerProps =>
+              <BookList {...routerProps}
+                handleChange={this.handleChange}
+                searchInput={this.state.searchInput}
+                books={this.props.books}/>}/>
           <Route exact path="/books/bookshelf" render={routerProps => <BookShelf {...routerProps} books={this.props.books}/>}/>
           <Route exact path="/books/new" render={routerProps => <BookNewForm {...routerProps} addBook={this.props.addBook}/>}/>
           <Route exact path="/books/:id" render={routerProps =>
