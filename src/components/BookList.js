@@ -57,7 +57,7 @@ const BookList = (props) => {
         {renderQuote()}
       </div>
       <form>
-        <input onChange={props.handleChange} type="text" value={props.searchInput} placeholder="search titles in list"/>
+        <input class="searchInput" size={35} onChange={props.handleChange} type="text" value={props.searchInput} placeholder="search titles in list"/>
       </form>
       <div className="bookListGrid">
         {renderBooks()}
