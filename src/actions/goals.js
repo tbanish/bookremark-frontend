@@ -1,6 +1,6 @@
 export const loadGoals = () => {
   return dispatch => {
-    fetch('http://localhost:3001/goals')
+    fetch('https://bookremark.herokuapp.com/goals')
       .then(resp => resp.json())
       .then(goals => {
         dispatch({type: 'LOAD_GOALS', payload: goals.data})
@@ -13,7 +13,7 @@ export const addGoal = (goal) => {
     const body = {
       total: goal
     }
-    fetch('http://localhost:3001/goals', {
+    fetch('https://bookremark.herokuapp.com/goals', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -32,7 +32,7 @@ export const updateGoal = (goal, id) => {
     const body = {
       total: goal
     }
-    fetch(`http://localhost:3001/goals/${id}`, {
+    fetch(`https://bookremark.herokuapp.com/goals/${id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json'
@@ -48,7 +48,7 @@ export const updateGoal = (goal, id) => {
 
 export const deleteGoal = (id) => {
   return dispatch => {
-    fetch(`http://localhost:3001/goals/${id}`, {
+    fetch(`https://bookremark.herokuapp.com/goals/${id}`, {
       method: 'DELETE'
     })
       .then(resp => {

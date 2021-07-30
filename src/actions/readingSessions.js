@@ -11,7 +11,7 @@ export const addReadingSession = (readingSession) => {
       }
     }
 
-    fetch(`http://localhost:3001/books/${readingSession.book_id}/reading_sessions`, {
+    fetch(`https://bookremark.herokuapp.com/books/${readingSession.book_id}/reading_sessions`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -38,7 +38,7 @@ export const addReadingSession = (readingSession) => {
 
 export const updateReadingSession = (readingSession, id) => {
   return dispatch => {
-    fetch(`http://localhost:3001/books/${readingSession.book_id}/reading_sessions/${id}`, {
+    fetch(`https://bookremark.herokuapp.com/books/${readingSession.book_id}/reading_sessions/${id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json'
@@ -58,7 +58,7 @@ export const deleteReadingSessions = (id) => {
 
 export const deleteReadingSession = (readingSession) => {
   return dispatch => {
-    fetch(`http://localhost:3001/books/${readingSession.book_id}/reading_sessions/${readingSession.id}`, {
+    fetch(`https://bookremark.herokuapp.com/books/${readingSession.book_id}/reading_sessions/${readingSession.id}`, {
       method: 'DELETE'
     })
       .then(resp => dispatch({type: 'DELETE_READING_SESSION', payload: readingSession.id}))

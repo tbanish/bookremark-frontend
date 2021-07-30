@@ -1,6 +1,6 @@
 import { updateGoal } from './goals.js'
 
-const booksEndpoint = 'http://localhost:3001/books'
+const booksEndpoint = 'https://bookremark.herokuapp.com/books'
 
 export const loadBooks = () => {
   return dispatch => {
@@ -60,7 +60,7 @@ export const updateBook = (book, id) => {
 
 export const deleteBook = (bookId, goal, goalId) => {
   return (dispatch) => {
-    fetch(`http://localhost:3001/books/${bookId}`, {
+    fetch(`https://bookremark.herokuapp.com/books/${bookId}`, {
       method: 'DELETE'
     })
       .then(resp => {

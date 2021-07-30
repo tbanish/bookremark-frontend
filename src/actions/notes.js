@@ -1,6 +1,6 @@
 export const updateNote = (note, bookId) => {
   return dispatch => {
-    fetch(`http://localhost:3001/books/${bookId}/notes/${note.id}`, {
+    fetch(`https://bookremark.herokuapp.com/books/${bookId}/notes/${note.id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json'
@@ -23,7 +23,7 @@ export const updateNote = (note, bookId) => {
 
 export const deleteNote = (id, bookId) => {
   return dispatch => {
-    fetch(`http://localhost:3001/books/${bookId}/notes/${id}`,{
+    fetch(`https://bookremark.herokuapp.com/books/${bookId}/notes/${id}`,{
       method: 'DELETE'
     })
       .then(resp => dispatch({type: 'DELETE_NOTE', payload: id}))
