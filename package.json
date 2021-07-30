@@ -2,7 +2,7 @@
   "name": "react-reading-goal-frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://tbanish.github.io/react-reading-goal-frontend",
+  "homepage": "https://react-reading-goal-frontend.github.io/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
