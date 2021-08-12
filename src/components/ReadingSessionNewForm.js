@@ -1,7 +1,7 @@
 import React from 'react'
 import Timer from './Timer.js'
 import TodaysDate from './TodaysDate.js'
-import uuid from 'uuid'
+import {v4 as uuid} from 'uuid'
 import '../css/ReadingSessionNewForm.css'
 
 class ReadingSessionNewForm extends React.Component {
