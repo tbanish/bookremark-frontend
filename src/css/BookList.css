@@ -57,10 +57,18 @@
 }
 
 #emptyBookList {
-  padding-left: 350px;
-  width: 500px;
+  /* padding-left: 350px;
+  width: 500px; */
   line-height: 30px;
   color: #4c4c4c;
+  position: absolute;
+  top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+  margin-top: 400px;
+
 }
 
 #emptyBookList a {

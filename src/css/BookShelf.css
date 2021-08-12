@@ -64,13 +64,22 @@
 }
 
 #emptyBookShelf {
-  margin-left: 280px;
-  margin-right: 280px;
+  /* margin-left: 280px;
+  margin-right: 280px; */
   color: #4c4c4c;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-top: 400px;
 }
 
 #emptyBookShelfMessage {
-  width: 600px;
-  line-height: 30px;
-  font-size: 18px;
+  /* width: 600px; */
+  /* line-height: 30px;
+  font-size: 18px; */
+  margin-left: 100px;
+  margin-right: 100px;
 }
